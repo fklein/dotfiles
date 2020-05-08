@@ -1,0 +1,11 @@
+- link:
+        ~/.bash_profile:
+        ~/.vimrc:
+
+- create:
+    - ~/.vim/backup
+    - ~/.vim/swap
+    - ~/.vim/undo
+
+- shell:
+    - [touch ~/.vimrc.local]
