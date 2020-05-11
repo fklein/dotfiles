@@ -1,6 +1,12 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
 - link:
-        ~/.bash_profile:
-        ~/.vimrc:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.vimrc:
 
 - create:
     - ~/.vim/backup
