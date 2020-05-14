@@ -6,6 +6,7 @@
 - link:
     ~/.bash_profile:
     ~/.bashrc:
+    ~/.bashrc.d/global.bash: bash/global.bash
     ~/.vimrc:
 
 - create:
