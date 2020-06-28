@@ -1,0 +1,30 @@
+[user]
+    name = fklein
+    email = krautwut@gmail.com
+
+[alias]
+    count = !git shortlog -sn
+    st = status
+
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+
+[diff]
+  colorMoved = default
+
+[push]
+    default = upstream
+
+[core]
+    autocrlf = input
+    editor = vim
+    excludesfile = ~/.gitignore
+
+[cola]
+    spellcheck = false
+
+[include]
+    path = ~/.gitconfig.local

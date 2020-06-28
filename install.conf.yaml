@@ -2,17 +2,29 @@
     link:
         create: true
         relink: true
+    render:
+        create: true
+        rerender: true
+        context: ~/settings.yaml
 
-- link:
-    ~/.bash_profile:
-    ~/.bashrc:
-    ~/.bashrc.d/global.bash: bash/global.bash
-    ~/.vimrc:
+- clean: ['~', '~/.bashrc.d']
 
 - create:
     - ~/.vim/backup
     - ~/.vim/swap
     - ~/.vim/undo
 
+- link:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.bashrc.d/global.bash: bash/global.bash
+    ~/.vimrc:
+    ~/.gitconfig:
+    ~/.gitignore:
+
+- render:
+    ~/.gitconfig.local:
+
 - shell:
+    - [touch ~/.bashrc.local]
     - [touch ~/.vimrc.local]
