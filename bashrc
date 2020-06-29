@@ -34,7 +34,8 @@ alias fgrep='fgrep --color=auto'
 alias l='ls -CF'
 alias ll='ls -lh'
 alias la='ls -A'
-alias lt='ls -ltrh'
+alias lla='ll -A'
+alias lt='ll -tr'
 
 # Prompt before overwriting
 alias cp='cp -i'
