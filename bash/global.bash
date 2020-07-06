@@ -6,6 +6,12 @@ complete -f jump
 mcd() { mkdir -p "$1" && cd "$1" ; }
 complete -d mcd
 
+# Add an "alert" alias for long running commands.
+# Use like so: sleep 10; alert
+if command -v notify-send >/dev/null; then
+    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+fi
+
 # An extended "cd" command that keeps track of visited directories (based on pushd/popd)
 # Shameless rip-off of https://linuxgazette.net/109/misc/marinov/acd_func.sh
 cdhistory () {
