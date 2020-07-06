@@ -1,6 +1,19 @@
 # Exit if not running interactively
 [[ $- != *i* ]] && return
 
+# Load global settings
+if [[ -f /etc/bashrc ]]; then
+    source /etc/bashrc
+fi
+
+# Enable default completion features
+# Might already be present if enabled in /etc/bashrc or /etc/bash.bashrc
+if [[ -f /usr/share/bash-completion/bash_completion ]]; then
+    source /usr/share/bash-completion/bash_completion
+elif [[ -f /etc/bash_completion ]]; then
+    source /etc/bash_completion
+fi
+
 # Enable useful shell options
 shopt -s cdspell
 shopt -s checkwinsize
@@ -12,13 +25,21 @@ shopt -s direxpand
 # History settings
 HISTSIZE=2500
 HISTFILESIZE=10000
-HISTFILE="$HOME/.bash_history"
+HISTFILE="${HOME}/.bash_history"
 HISTCONTROL="ignoreboth"
 HISTIGNORE="pwd:cd"
 shopt -s histappend
 
 # Set the prompt
-PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+PS1='\e[1;39m[\e[1;32m\u@\h \e[1;34m\w\e[1;39m]$ \e[0m'
+
+# Display the current directory in the terminal title.
+# For remote sessions also include user and hostname.
+if [[ -n ${SSH_CLIENT} ]] || [[ -n ${SSH_TTY} ]]; then
+    PROMPT_COMMAND='printf "\e]0;%s@%s:%s\a" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+else
+    PROMPT_COMMAND='printf "\e]0;%s\a" "${PWD/#$HOME/\~}"'
+fi
 
 # Make vim the standard editor
 alias vi='vim'
@@ -29,6 +50,11 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+
+# Load custom color settings
+if [[ -f ~/.dircolors ]] && command -v dircolors &>/dev/null; then
+    eval "$(dircolors -b ~/.dircolors)"
+fi
 
 # Basic convenience aliases
 alias l='ls -CF'
@@ -41,9 +67,6 @@ alias lt='ll -tr'
 alias cp='cp -i'
 alias mv='mv -i'
 
-# Utility aliases
-alias peek='tee >(cat 1>&2)'
-
 # Utility functions
 _appendpath() { [[ ":${PATH}:" != *":${1}:"* ]] && PATH="${PATH:+"${PATH}:"}${1}" ; }
 _prependpath() { [[ ":${PATH}:" != *":${1}:"* ]] && PATH="${1}${PATH:+":${PATH}"}" ; }
@@ -52,6 +75,7 @@ _prependpath() { [[ ":${PATH}:" != *":${1}:"* ]] && PATH="${1}${PATH:+":${PATH}"
 for extfile in ~/.bashrc.d/*.bash; do
     [[ -f ${extfile} ]] && source "${extfile}"
 done
+unset extfile
 
 # Apply machine specific settings
 if [[ -f ~/.bashrc.local ]]; then

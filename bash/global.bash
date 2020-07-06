@@ -1,3 +1,11 @@
+# Peek into a command pipeline
+alias peek='tee >(cat 1>&2)'
+
+# Add an "alert" alias for long running commands. Use like so: sleep 10; alert
+if command -v notify-send >/dev/null; then
+    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+fi
+
 # Change directory to the location of a file
 jump() { cd "$(dirname "$1")" ; }
 complete -f jump
@@ -5,12 +13,6 @@ complete -f jump
 # Create a new directory and change into it
 mcd() { mkdir -p "$1" && cd "$1" ; }
 complete -d mcd
-
-# Add an "alert" alias for long running commands.
-# Use like so: sleep 10; alert
-if command -v notify-send >/dev/null; then
-    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-fi
 
 # An extended "cd" command that keeps track of visited directories (based on pushd/popd)
 # Shameless rip-off of https://linuxgazette.net/109/misc/marinov/acd_func.sh
