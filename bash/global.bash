@@ -66,7 +66,7 @@ _cdhistory() {
     # Only handle completions for "-*" and "--*"
     [[ ${cur} == --* ]] && return
     if [[ ${cur} == -* ]]; then
-        compopt -o nosort
+        compopt -o nosort 2>/dev/null
         local index=0
         # Find the indices in the directory stack that match the number typed so far
         while read olddir; do
