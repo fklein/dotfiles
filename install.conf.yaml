@@ -20,6 +20,7 @@
     ~/.bashrc.d/global.bash: bash/global.bash
     ~/.dircolors: dircolors-solarized/dircolors.ansi-dark
     ~/.vimrc:
+    ~/.vim/colors/solarized.vim: vim-colors-solarized/colors/solarized.vim
     ~/.gitconfig:
     ~/.gitignore:
 

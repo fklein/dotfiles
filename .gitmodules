@@ -1,9 +1,14 @@
 [submodule "dotbot"]
     path = dotbot
-    url = https://github.com/anishathalye/dotbot
+    url = https://github.com/anishathalye/dotbot.git
     ignore = dirty
 
 [submodule "dircolors-solarized"]
     path = dircolors-solarized
-    url = https://github.com/seebi/dircolors-solarized
+    url = https://github.com/seebi/dircolors-solarized.git
+    ignore = dirty
+
+[submodule "vim-colors-solarized"]
+    path = vim-colors-solarized
+    url = https://github.com/altercation/vim-colors-solarized.git
     ignore = dirty

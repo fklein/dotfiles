@@ -61,9 +61,16 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
 "
-" Attempt to apply a colorscheme
+" Attempt to apply the default colorscheme
 "
 silent! colorscheme default
+
+"
+" Apply the solarized colorscheme
+"
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 "
 " Enable mouse mode (scrolling, selection, etc)
