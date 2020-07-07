@@ -1,4 +1,9 @@
 [submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
+    path = dotbot
+    url = https://github.com/anishathalye/dotbot
+    ignore = dirty
+
+[submodule "dircolors-solarized"]
+    path = dircolors-solarized
+    url = https://github.com/seebi/dircolors-solarized
+    ignore = dirty

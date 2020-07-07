@@ -18,6 +18,7 @@
     ~/.bash_profile:
     ~/.bashrc:
     ~/.bashrc.d/global.bash: bash/global.bash
+    ~/.dircolors: dircolors-solarized/dircolors.ansi-dark
     ~/.vimrc:
     ~/.gitconfig:
     ~/.gitignore:
