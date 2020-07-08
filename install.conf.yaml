@@ -2,6 +2,7 @@
     link:
         create: true
         relink: true
+        glob: true
     render:
         create: true
         rerender: true
@@ -9,15 +10,10 @@
 
 - clean: ['~', '~/.bashrc.d']
 
-- create:
-    - ~/.vim/backup
-    - ~/.vim/swap
-    - ~/.vim/undo
-
 - link:
     ~/.bash_profile:
     ~/.bashrc:
-    ~/.bashrc.d/global.bash: bash/global.bash
+    ~/.bashrc.d/: bashrc.d/*.bash
     ~/.dircolors: dircolors-solarized/dircolors.ansi-dark
     ~/.vimrc:
     ~/.vim/colors/solarized.vim: vim-colors-solarized/colors/solarized.vim
@@ -26,6 +22,11 @@
 
 - render:
     ~/.gitconfig.local:
+
+- create:
+    - ~/.vim/backup
+    - ~/.vim/swap
+    - ~/.vim/undo
 
 - shell:
     - [touch ~/.bashrc.local]
