@@ -1,10 +1,13 @@
 [user]
-    name = fklein
-    email = krautwut@gmail.com
+    name = Florian Klein
+    email = fklein@users.noreply.github.com
 
 [alias]
-    count = !git shortlog -sn
+    count = shortlog -sn
     st = status
+    update-submodules = submodule update --init --recursive
+    upgrade-submodules = submodule update --init --remote
+    zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o \"${1}\"; }; zip"
 
 [color]
     ui = auto
@@ -17,6 +20,9 @@
 
 [push]
     default = upstream
+
+[pull]
+    ff = only
 
 [core]
     autocrlf = input

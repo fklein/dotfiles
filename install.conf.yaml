@@ -29,5 +29,8 @@
     - ~/.vim/undo
 
 - shell:
-    - [touch ~/.bashrc.local]
-    - [touch ~/.vimrc.local]
+    - touch ~/.bashrc.local
+    - touch ~/.vimrc.local
+    - git submodule sync --recursive
+    - git update-submodules
+
