@@ -2,26 +2,20 @@
     link:
         create: true
         relink: true
-        glob: true
-    render:
-        create: true
-        rerender: true
-        context: ~/settings.yaml
 
 - clean: ['~', '~/.bashrc.d']
 
 - link:
     ~/.bash_profile:
     ~/.bashrc:
-    ~/.bashrc.d/: bashrc.d/*.bash
+    ~/.bashrc.d/:
+        path: bashrc.d/*.bash
+        glob: true
     ~/.dircolors: dircolors-solarized/dircolors.ansi-dark
     ~/.vimrc:
     ~/.vim/colors/solarized.vim: vim-colors-solarized/colors/solarized.vim
     ~/.gitconfig:
     ~/.gitignore:
-
-- render:
-    ~/.gitconfig.local:
 
 - create:
     - ~/.vim/backup
@@ -29,8 +23,9 @@
     - ~/.vim/undo
 
 - shell:
-    - touch ~/.bashrc.local
-    - touch ~/.vimrc.local
+    - test -e ~/.bashrc.local || touch ~/.bashrc.local
+    - test -e ~/.gitconfig.local || touch ~/.gitconfig.local
+    - test -e ~/.vimrc.local || touch ~/.vimrc.local
     - git submodule sync --recursive
     - git update-submodules
 
