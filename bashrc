@@ -31,7 +31,8 @@ HISTIGNORE="pwd:cd"
 shopt -s histappend
 
 # Set the prompt
-PS1='\e[1;39m[\e[1;32m\u@\h \e[1;34m\w\e[1;39m]$ \e[0m'
+# Hint: Escape non-printable sequences, or line wrapping will not work correctly!
+PS1='\[\e[1;39m\][\[\e[1;32m\]\u@\h \[\e[1;34m\]\w\[\e[1;39m\]]$ \[\e[0m\]'
 
 # Display the current directory in the terminal title.
 # For remote sessions also include user and hostname.
