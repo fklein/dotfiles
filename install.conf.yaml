@@ -12,6 +12,7 @@
         path: bashrc.d/*.bash
         glob: true
     ~/.dircolors: dircolors-solarized/dircolors.ansi-dark
+    ~/.inputrc:
     ~/.vimrc:
     ~/.vim/colors/solarized.vim: vim-colors-solarized/colors/solarized.vim
     ~/.gitconfig:
