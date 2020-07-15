@@ -59,14 +59,19 @@ fi
 
 # Basic convenience aliases
 alias l='ls -CF'
+alias la='ls -ACF'
+alias lh='ls -ACF --ignore=[^.]\*'
 alias ll='ls -lh'
-alias la='ls -A'
-alias lla='ll -A'
-alias lt='ll -tr'
+alias lt='ls -lhtr'
+alias lb='ls -lhSr'
 
 # Prompt before overwriting
 alias cp='cp -i'
 alias mv='mv -i'
+
+# Default to human readable file size format
+alias df='df -h'
+alias du='du -h'
 
 # Utility functions
 _appendpath() { [[ ":${PATH}:" != *":${1}:"* ]] && PATH="${PATH:+"${PATH}:"}${1}" ; }
