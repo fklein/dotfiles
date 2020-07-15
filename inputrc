@@ -1,8 +1,14 @@
+# Set editing mode to "vi"
+set editing-mode vi
+
 # Make Tab autocomplete regardless of filename case
 set completion-ignore-case on
 
 # List all matches in case multiple possible completions are possible
 set show-all-if-ambiguous on
+
+# List all matches in case no partial completions are possible
+set show-all-if-unmodified on
 
 # Immediately add a trailing slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
@@ -22,7 +28,7 @@ set page-completions off
 set completion-query-items 200
 
 # Show extra file information when completing, like `ls -F` does
-set visible-stats on
+# set visible-stats on
 
 # Be more intelligent when autocompleting by also looking at the text after
 # the cursor. For example, when the current line is "cd ~/src/mozil", and
@@ -30,6 +36,9 @@ set visible-stats on
 # ~/src/mozillail", but to "cd ~/src/mozilla". (This is supported by the
 # Readline used by Bash 4.)
 set skip-completed-text on
+
+# Use colors to indicate the type of a completion
+set colored-stats on
 
 # Allow UTF-8 input and output, instead of showing stuff like $'\0123\0456'
 set input-meta on
