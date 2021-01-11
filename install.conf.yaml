@@ -17,6 +17,8 @@
     ~/.vim/colors/solarized.vim: vim-colors-solarized/colors/solarized.vim
     ~/.gitconfig:
     ~/.gitignore:
+    ~/.config/xfce4/terminal/terminalrc: config/xfce4/terminal/terminalrc
+    ~/.config/xfce4/terminal/accels.scm: config/xfce4/terminal/accels.scm
 
 - create:
     - ~/.vim/backup
