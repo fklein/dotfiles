@@ -17,6 +17,7 @@
     ~/.vim/colors/solarized.vim: vim-colors-solarized/colors/solarized.vim
     ~/.gitconfig:
     ~/.gitignore:
+    ~/.gitmessage:
     ~/.pythonrc:
     ~/.config/:
         path: config/**

@@ -15,6 +15,9 @@
     status = auto
     branch = auto
 
+[commit]
+    template = ~/.gitmessage
+
 [diff]
   colorMoved = default
 
