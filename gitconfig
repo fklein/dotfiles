@@ -3,8 +3,15 @@
     email = fklein@users.noreply.github.com
 
 [alias]
-    count = shortlog -sn
+    s = status -s
     st = status
+    logg = log --graph --decorate --oneline --all
+    logs = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    logss = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --numstat
+    count = shortlog -sn
+    diffn = diff --name-status
+    diffw = diff --color-words
+    aliases = ! "git config --list | grep \"^alias\\.\" | cut -c7- | grep -Ei --color \"${1}\" #"
     update-submodules = submodule update --init --recursive
     upgrade-submodules = submodule update --init --remote
     zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o \"${1}\"; }; zip"
