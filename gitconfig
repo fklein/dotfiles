@@ -2,6 +2,11 @@
     name = Florian Klein
     email = fklein@users.noreply.github.com
 
+[core]
+    autocrlf = input
+    editor = vim
+    excludesfile = ~/.gitignore
+
 [alias]
     s = status -s
     st = status
@@ -16,11 +21,6 @@
     upgrade-submodules = submodule update --init --remote
     zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o \"${1}\"; }; zip"
 
-[color]
-    ui = auto
-    diff = auto
-    status = auto
-    branch = auto
 
 [commit]
     template = ~/.gitmessage
@@ -34,10 +34,11 @@
 [pull]
     ff = only
 
-[core]
-    autocrlf = input
-    editor = vim
-    excludesfile = ~/.gitignore
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
 
 [cola]
     spellcheck = false
