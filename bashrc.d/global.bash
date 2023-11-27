@@ -4,6 +4,9 @@ alias kw='date +%V'
 # Mirror srdout to stederr, useful for seeing data going through a pipe
 alias peek='tee >(cat 1>&2)'
 
+# Trim trailing whitespace from a file
+alias rtrim="sed -i 's/\s\s*$//g'"
+
 # Add an "alert" alias for long running commands. Use like so: sleep 10; alert
 if command -v notify-send >/dev/null; then
     alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
