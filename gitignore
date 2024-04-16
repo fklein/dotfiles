@@ -13,6 +13,28 @@ Thumbs.db
 *.tmp
 
 #
+# IntelliJ
+#
+.idea/
+*.iws
+
+#
+# Eclipse
+#
+.settings/
+.loadpath
+.metadata
+.classpath
+.project
+*~.nib
+
+#
+# VS Code
+#
+.vscode/
+*.vsix
+
+#
 # Compiled source
 #
 *.com
