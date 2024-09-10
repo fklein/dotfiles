@@ -76,6 +76,7 @@ alias du='du -h'
 # Utility functions
 _appendpath() { [[ ":${PATH}:" != *":${1}:"* ]] && PATH="${PATH:+"${PATH}:"}${1}" ; }
 _prependpath() { [[ ":${PATH}:" != *":${1}:"* ]] && PATH="${1}${PATH:+":${PATH}"}" ; }
+_removepath() { PATH="${PATH//":${1}:"/":"}" ; PATH="${PATH/#"${1}:"/""}" ; PATH="${PATH/%":${1}"/""}" ; }
 
 # Load every "*.bash" file from ".bashrc.d"
 for extfile in ~/.bashrc.d/*.bash; do
