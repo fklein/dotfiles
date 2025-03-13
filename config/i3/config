@@ -114,7 +114,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # A more modern dmenu replacement is rofi
-bindsym $mod+d exec "rofi -modi drun,window,ssh,run -show drun -theme ~/.config/rofi/themes/squared-nord.rasi"
+bindsym $mod+d exec --no-startup-id "rofi -modi drun,window,ssh,run -show drun -theme ~/.config/rofi/themes/squared-nord.rasi"
+
+# Show a fancy power menu with rofi
+bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/powermenu.sh
 
 ##############
 # Workspaces #
@@ -301,7 +304,7 @@ mode "$modeSysControl" {
     bindsym $mod+BackSpace mode "default"
 }
 
-bindsym $mod+BackSpace mode "$modeSysControl"
+bindsym $mod+Shift+s mode "$modeSysControl"
 
 # Lock the screen (via signaling xss-lock)
 bindsym $mod+Shift+x exec --no-startup-id loginctl lock-session
