@@ -99,3 +99,5 @@ configuration {
         delay:  0;
     }
 }
+
+@theme "~/.config/rofi/themes/squared-nord.rasi"
