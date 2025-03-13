@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+SCREENSHOT=$(mktemp --suffix ".png")
+LOCKIMG="~/.config/i3/img/lock.png"
+if scrot -zo "${SCREENSHOT}" && magick "${SCREENSHOT}" -scale "10%" -scale "1000%" "${SCREENSHOT}"; then
+    i3lock --image "${SCREENSHOT}" "$@"
+else
+    if [[ -f "${LOCKIMG}" ]]; then
+        i3lock --tiling --image "${LOCKIMG}" "$@"
+    else
+        i3lock --color=303030 "$@"
+    fi
+fi
+rm -f "${SCREENSHOT}"
