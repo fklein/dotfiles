@@ -79,7 +79,7 @@ configuration {
 
     /*---------- Misc setting ----------*/
     terminal: "rofi-sensible-terminal";
-    font: "Mono 11";
+    font: "Noto Sans Mono 11";
     sort: false;
     threads: 0;
     click-to-exit: true;
@@ -100,4 +100,4 @@ configuration {
     }
 }
 
-@theme "~/.config/rofi/themes/squared-nord.rasi"
+@theme "~/.config/rofi/themes/launcher-default.rasi"

@@ -1,12 +1,5 @@
 /**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- *
- * Rofi Theme File
- * Rofi Version: 1.7.3
- *
- * Modified from launcher type-2, style-3 and its related files.
+ * Modified from https://raw.githubusercontent.com/adi1090x/rofi/refs/heads/master/files/launchers/type-2/style-3.rasi
  **/
 
 /*****----- Configuration -----*****/
@@ -15,19 +8,47 @@ configuration {
     show-icons:                 true;
     display-drun:               "";
     drun-display-format:        "{name}";
+
+    display-window: "";
+    display-windowcd: "";
+    display-ssh: "󰱠";
+    display-run: "";
+    display-combi: "";
+    display-keys: "";
+    display-filebrowser: "";
 }
 
 /*****----- Global Properties -----*****/
 * {
-/*    font: "Noto Sans Regular 10";*/
-    font: "Iosevka Nerd Font 10";
+    font: "Noto Sans Nerd Font 10";
 
+    /* Colorscheme onedark */
+/*
     background:     #1E2127FF;
     background-alt: #282B31FF;
     foreground:     #FFFFFFFF;
     selected:       #61AFEFFF;
     active:         #98C379FF;
     urgent:         #E06C75FF;
+*/
+
+    /* Colorscheme everforest */
+/*
+    background:     #323D43FF;
+    background-alt: #3C474DFF;
+    foreground:     #DAD1BEFF;
+    selected:       #7FBBB3FF;
+    active:         #A7C080FF;
+    urgent:         #E67E80FF;
+*/
+
+    /* Colorscheme nord */
+    background:     #2E3440FF;
+    background-alt: #383E4AFF;
+    foreground:     #E5E9F0FF;
+    selected:       #81A1C1FF;
+    active:         #A3BE8CFF;
+    urgent:         #BF616AFF;
 }
 
 /*****----- Main Window -----*****/
