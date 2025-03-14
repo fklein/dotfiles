@@ -1,12 +1,5 @@
 /**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- *
- * Rofi Theme File
- * Rofi Version: 1.7.3
- *
- * Modified from powermenu type-1, style-5 and its related files.
+ * Modified from https://raw.githubusercontent.com/adi1090x/rofi/refs/heads/master/files/powermenu/type-1/style-1.rasi
  **/
 
 /*****----- Configuration -----*****/
@@ -16,15 +9,35 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-/*    font: "Noto Sans Regular 10"; */
-    font: "JetBrains Mono Nerd Font 10";
+    font: "Noto Sans Nerd Font 10";
 
+    /* Colorscheme onedark */
+/*
     background:     #1E2127FF;
     background-alt: #282B31FF;
     foreground:     #FFFFFFFF;
     selected:       #61AFEFFF;
     active:         #98C379FF;
     urgent:         #E06C75FF;
+*/
+
+    /* Colorscheme everforest */
+/*
+    background:     #323D43FF;
+    background-alt: #3C474DFF;
+    foreground:     #DAD1BEFF;
+    selected:       #7FBBB3FF;
+    active:         #A7C080FF;
+    urgent:         #E67E80FF;
+*/
+
+    /* Colorscheme nord */
+    background:     #2E3440FF;
+    background-alt: #383E4AFF;
+    foreground:     #E5E9F0FF;
+    selected:       #81A1C1FF;
+    active:         #A3BE8CFF;
+    urgent:         #BF616AFF;
 }
 
 /*****----- Main Window -----*****/
@@ -34,7 +47,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       605px;
+    width:                       400px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -43,7 +56,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               4px;
+    border-radius:               0px;
     border-color:                @selected;
     cursor:                      "default";
     background-color:            @background;
@@ -73,26 +86,22 @@ inputbar {
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
-    children:                    [ "textbox-prompt-colon", dummy, "prompt"];
-}
-
-dummy {
-    background-color:            transparent;
+    children:                    [ "textbox-prompt-colon", "prompt"];
 }
 
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
+    str:                         "⏻";
     padding:                     10px 14px;
-    border-radius:               4px;
+    border-radius:               10px;
     background-color:            @urgent;
     text-color:                  @background;
 }
 prompt {
     enabled:                     true;
     padding:                     10px;
-    border-radius:               4px;
+    border-radius:               10px;
     background-color:            @active;
     text-color:                  @background;
 }
@@ -103,7 +112,7 @@ message {
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               4px;
+    border-radius:               10px;
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  @foreground;
@@ -112,7 +121,7 @@ textbox {
     background-color:            inherit;
     text-color:                  inherit;
     vertical-align:              0.5;
-    horizontal-align:            0.5;
+    horizontal-align:            0.0;
     placeholder-color:           @foreground;
     blink:                       true;
     markup:                      true;
@@ -129,8 +138,8 @@ error-message {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     5;
-    lines:                       1;
+    columns:                     1;
+    lines:                       5;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -138,8 +147,8 @@ listview {
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
-
-    spacing:                     10px;
+    
+    spacing:                     5px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
@@ -157,9 +166,9 @@ element {
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               4px;
+    border-radius:               10px;
     border-color:                @selected;
-    background-color:            @background-alt;
+    background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
@@ -168,11 +177,9 @@ element-text {
     text-color:                  inherit;
     cursor:                      inherit;
     vertical-align:              0.5;
-    horizontal-align:            0.5;
+    horizontal-align:            0.0;
 }
 element selected.normal {
-    border:                      0px 2px 0px 2px;
-    border-radius:               4px;
     background-color:            var(selected);
     text-color:                  var(background);
 }

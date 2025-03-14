@@ -22,6 +22,9 @@
     ~/.config/:
         path: config/**
         glob: true
+    ~/.local/share:
+        path: local/share/**
+        glob: true
 
 - create:
     - ~/.vim/backup
