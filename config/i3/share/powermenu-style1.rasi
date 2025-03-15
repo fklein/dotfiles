@@ -32,12 +32,12 @@ configuration {
 */
 
     /* Colorscheme nord */
-    background:     #2E3440FF;
-    background-alt: #383E4AFF;
-    foreground:     #E5E9F0FF;
-    selected:       #81A1C1FF;
-    active:         #A3BE8CFF;
-    urgent:         #BF616AFF;
+    background:     #2e3440ff;
+    background-alt: #434c5eff; /* 3b4252ff */
+    foreground:     #d8dee9ff; /* e5e9f0ff */
+    selected:       #88c0d0ff; /* 81a1c1ff */
+    active:         #a3be8cff;
+    urgent:         #bf616aff; /* ebcb8bff */
 }
 
 /*****----- Main Window -----*****/

@@ -38,12 +38,12 @@ configuration {
 */
 
     /* Colorscheme nord */
-    bg0:     #2E3440;
-    bg1:     #3B4252;
-    fg0:     #D8DEE9;
+    bg0:     #2e3440ff;
+    bg1:     #434c5eff; /* 3b4252ff */
+    fg0:     #d8dee9ff; /* e5e9f0ff */
 
-    accent-color:     #88C0D0;
-    urgent-color:     #EBCB8B;
+    accent-color:     #88c0d0ff; /* 81a1c1ff */
+    urgent-color:     #ebcb8bff; /* bf616aff */
 
     background-color:   transparent;
     text-color:         @fg0;
