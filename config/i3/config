@@ -119,6 +119,12 @@ bindsym $mod+d exec --no-startup-id "rofi -modi drun,window,ssh,filebrowser,run 
 # Show a fancy power menu with rofi
 bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/powermenu.sh
 
+# An alternative way of displaying a power menu with rofi
+# bindsym $mod+BackSpace exec --no-startup-id "rofi -show pm \
+#     -modi pm:~/.config/rofi/share/power-menu \
+#     -theme ~/.config/rofi/themes/launcher-squared.rasi \
+#     -theme-str 'window {width: 8em;} listview {lines: 6;}'"
+
 ##############
 # Workspaces #
 ##############

@@ -1,9 +1,43 @@
-/* ROFI SQUARED THEME USING THE NORD PALETTE  */
-/* Author: Newman Sanchez (https://github.com/newmanls) */
+/**
+ * Modified from https://raw.githubusercontent.com/newmanls/rofi-themes-collection/refs/heads/master/themes/squared-nord.rasi
+ **/
+
+configuration {
+    show-icons:          true;
+    display-drun:        "";
+    display-window:      "";
+    display-windowcd:    "";
+    display-ssh:         "󰱠";
+    display-run:         "";
+    display-combi:       "";
+    display-keys:        "";
+    display-filebrowser: "";
+}
 
 * {
-    font:   "FiraCode Nerd Font Medium 12";
+    font: "Noto Sans Nerd Font 10";
 
+    /* Colorscheme material red */
+/*
+    bg0:     #212121;
+    bg1:     #404040;
+    fg0:     #eeffff;
+
+    accent-color:     #f07178;
+    urgent-color:     #ffcb6b;
+*/
+
+    /* Colorscheme everforest */
+/*
+    bg0:     #2B3339;
+    bg1:     #323D43;
+    fg0:     #D3C6AA;
+
+    accent-color:     #A7C080;
+    urgent-color:     #DBBC7F;
+*/
+
+    /* Colorscheme nord */
     bg0:     #2E3440;
     bg1:     #3B4252;
     fg0:     #D8DEE9;
