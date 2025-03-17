@@ -1,0 +1,18 @@
+/*
+ * Color definitions for the Nord bright scheme.
+ */
+
+@import "colors-nord-common.rasi"
+
+* {
+    // Colorscheme nord bright
+    background:     @nord6-snowstorm;
+    background-alt: @nord4-snowstorm;
+    foreground:     @nord0-polarnight;
+    foreground-alt: @nord3-polarnight;
+    selected:       @nord7-frost; // @nord8-frost
+    active:         @nord15-aurora;
+    urgent:         @nord12-aurora;
+    success:        @nord14-aurora;
+    error:          @nord11-aurora;
+}

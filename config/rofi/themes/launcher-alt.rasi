@@ -2,6 +2,13 @@
  * Modified from https://raw.githubusercontent.com/adi1090x/rofi/refs/heads/master/files/launchers/type-2/style-3.rasi
  **/
 
+/*****----- Global Properties -----*****/
+@import "share/colors.rasi"
+
+* {
+    font: "Noto Sans Nerd Font 10";
+}
+
 /*****----- Configuration -----*****/
 configuration {
     modi:                       "drun";
@@ -16,67 +23,6 @@ configuration {
     display-combi:       "";
     display-keys:        "";
     display-filebrowser: "";
-}
-
-/*****----- Global Properties -----*****/
-* {
-    font: "Noto Sans Nerd Font 10";
-
-/*
-    // Colorscheme onedark
-    background:     #1E2127FF;
-    background-alt: #282B31FF;
-    foreground:     #FFFFFFFF;
-    selected:       #61AFEFFF;
-    active:         #98C379FF;
-    urgent:         #E06C75FF;
-
-    // Colorscheme everforest
-    background:     #323D43FF;
-    background-alt: #3C474DFF;
-    foreground:     #DAD1BEFF;
-    selected:       #7FBBB3FF;
-    active:         #A7C080FF;
-    urgent:         #E67E80FF;
-*/
-
-    // nord color palette
-    nord0-polarnight: #2e3440ff;
-    nord1-polarnight: #3b4252ff;
-    nord2-polarnight: #434c5eff;
-    nord3-polarnight: #4c566aff;
-    nord4-snowstorm:  #d8dee9ff;
-    nord5-snowstorm:  #e5e9f0ff;
-    nord6-snowstorm:  #eceff4ff;
-    nord7-frost:      #8fbcbbff;
-    nord8-frost:      #88c0d0ff;
-    nord9-frost:      #81a1c1ff;
-    nord10-frost:     #5e81acff;
-    nord11-aurora:    #bf616aff;
-    nord12-aurora:    #d08770ff;
-    nord13-aurora:    #ebcb8bff;
-    nord14-aurora:    #a3be8cff;
-    nord15-aurora:    #b48eadff;
-
-/*
-    // Colorscheme nord bright
-    background:     @nord6-snowstorm;
-    background-alt: @nord4-snowstorm;
-    foreground:     @nord0-polarnight;
-    foreground-alt: @nord3-polarnight;
-    selected:       @nord7-frost; // @nord8-frost
-    active:         @nord15-aurora;
-    urgent:         @nord12-aurora;
-*/
-
-    // Colorscheme nord dark
-    background:     @nord0-polarnight;
-    background-alt: @nord2-polarnight;
-    foreground:     @nord6-snowstorm;
-    foreground-alt: @nord4-snowstorm;
-    selected:       @nord8-frost; // @nord9-frost
-    active:         @nord14-aurora;
-    urgent:         @nord13-aurora;
 }
 
 /*****----- Main Window -----*****/

@@ -1,0 +1,18 @@
+/*
+ * Color definitions for the Nord dark scheme.
+ */
+
+@import "colors-nord-common.rasi"
+
+* {
+    // Colorscheme nord dark
+    background:     @nord0-polarnight;
+    background-alt: @nord2-polarnight;
+    foreground:     @nord6-snowstorm;
+    foreground-alt: @nord4-snowstorm;
+    selected:       @nord8-frost; // @nord9-frost
+    active:         @nord14-aurora;
+    urgent:         @nord13-aurora;
+    success:        @nord14-aurora;
+    error:          @nord11-aurora;
+}

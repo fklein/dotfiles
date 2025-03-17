@@ -1,0 +1,23 @@
+/*
+ * Color palette for the Nord color scheme.
+ */
+
+* {
+    // nord color palette
+    nord0-polarnight: #2e3440ff;
+    nord1-polarnight: #3b4252ff;
+    nord2-polarnight: #434c5eff;
+    nord3-polarnight: #4c566aff;
+    nord4-snowstorm:  #d8dee9ff;
+    nord5-snowstorm:  #e5e9f0ff;
+    nord6-snowstorm:  #eceff4ff;
+    nord7-frost:      #8fbcbbff;
+    nord8-frost:      #88c0d0ff;
+    nord9-frost:      #81a1c1ff;
+    nord10-frost:     #5e81acff;
+    nord11-aurora:    #bf616aff;
+    nord12-aurora:    #d08770ff;
+    nord13-aurora:    #ebcb8bff;
+    nord14-aurora:    #a3be8cff;
+    nord15-aurora:    #b48eadff;
+}

@@ -2,6 +2,19 @@
  * Modified from https://raw.githubusercontent.com/newmanls/rofi-themes-collection/refs/heads/master/themes/squared-nord.rasi
  **/
 
+@import "share/colors.rasi"
+
+* {
+    font: "Noto Sans Nerd Font 10";
+
+    background-color:   transparent;
+    text-color:         @foreground;
+
+    margin:     0;
+    padding:    0;
+    spacing:    0;
+}
+
 configuration {
     show-icons:          true;
     display-drun:        "";
@@ -14,82 +27,18 @@ configuration {
     display-filebrowser: "";
 }
 
-* {
-    font: "Noto Sans Nerd Font 10";
-
-/*
-    // Colorscheme material red
-    bg0:     #212121;
-    bg1:     #404040;
-    fg0:     #eeffff;
-
-    accent-color:     #f07178;
-    urgent-color:     #ffcb6b;
-
-    // Colorscheme everforest
-    bg0:     #2B3339;
-    bg1:     #323D43;
-    fg0:     #D3C6AA;
-
-    accent-color:     #A7C080;
-    urgent-color:     #DBBC7F;
-*/
-
-    // nord color palette
-    nord0-polarnight: #2e3440ff;
-    nord1-polarnight: #3b4252ff;
-    nord2-polarnight: #434c5eff;
-    nord3-polarnight: #4c566aff;
-    nord4-snowstorm:  #d8dee9ff;
-    nord5-snowstorm:  #e5e9f0ff;
-    nord6-snowstorm:  #eceff4ff;
-    nord7-frost:      #8fbcbbff;
-    nord8-frost:      #88c0d0ff;
-    nord9-frost:      #81a1c1ff;
-    nord10-frost:     #5e81acff;
-    nord11-aurora:    #bf616aff;
-    nord12-aurora:    #d08770ff;
-    nord13-aurora:    #ebcb8bff;
-    nord14-aurora:    #a3be8cff;
-    nord15-aurora:    #b48eadff;
-
-/*
-    // Colorscheme nord bright
-    bg0:     @nord6-snowstorm;
-    bg1:     @nord4-snowstorm;
-    fg0:     @nord0-polarnight;
-    accent-color:     @nord7-frost;
-    urgent-color:     @nord12-aurora;
-*/
-
-    // Colorscheme nord dark
-    bg0:     @nord0-polarnight;
-    bg1:     @nord2-polarnight;
-    fg0:     @nord6-snowstorm;
-
-    accent-color:     @nord8-frost;
-    urgent-color:     @nord13-aurora;
-
-    background-color:   transparent;
-    text-color:         @fg0;
-
-    margin:     0;
-    padding:    0;
-    spacing:    0;
-}
-
 window {
     location:   center;
     width:      480;
 
-    background-color:   @bg0;
+    background-color:   @background;
 }
 
 inputbar {
     spacing:    8px;
     padding:    8px;
 
-    background-color:   @bg1;
+    background-color:   @background-alt;
 }
 
 prompt, entry, element-icon, element-text {
@@ -97,12 +46,12 @@ prompt, entry, element-icon, element-text {
 }
 
 prompt {
-    text-color: @accent-color;
+    text-color: @selected;
 }
 
 textbox {
     padding:            8px;
-    background-color:   @bg1;
+    background-color:   @background-alt;
 }
 
 listview {
@@ -119,31 +68,31 @@ element {
 }
 
 element normal normal {
-    text-color: @fg0;
+    text-color: @foreground;
 }
 
 element normal urgent {
-    text-color: @urgent-color;
+    text-color: @urgent;
 }
 
 element normal active {
-    text-color: @accent-color;
+    text-color: @selected;
 }
 
 element alternate active {
-    text-color: @accent-color;
+    text-color: @selected;
 }
 
 element selected {
-    text-color: @bg0;
+    text-color: @background;
 }
 
 element selected normal, element selected active {
-    background-color:   @accent-color;
+    background-color:   @selected;
 }
 
 element selected urgent {
-    background-color:   @urgent-color;
+    background-color:   @urgent;
 }
 
 element-icon {

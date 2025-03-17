@@ -3,7 +3,7 @@
 # Modified from https://raw.githubusercontent.com/adi1090x/rofi/refs/heads/master/files/powermenu/type-1/powermenu.sh
 
 # Current Theme
-themeDir="${HOME}/.config/i3/share"
+themeDir="${HOME}/.config/rofi/themes/share"
 themeFile=${1:-"powermenu-style5.rasi"}
 
 # CMDs
