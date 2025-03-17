@@ -3,7 +3,11 @@
         create: true
         relink: true
 
-- clean: ['~', '~/.bashrc.d', '~/.config']
+- clean:
+    '~':
+    '~/.bashrc.d':
+    '~/.config':
+        recursive: true
 
 - link:
     ~/.bash_profile:
