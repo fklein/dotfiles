@@ -34,6 +34,11 @@ window {
     background-color:   @background;
 }
 
+mainbox {
+    border:         1px;
+    border-color:   @border;
+}
+
 inputbar {
     spacing:    8px;
     padding:    8px;

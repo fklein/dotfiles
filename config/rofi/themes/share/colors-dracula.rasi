@@ -3,7 +3,7 @@
  */
 
 * {
-    // Dracula colour palette
+    // Color palette
     drac-bgd: #282a36;
     drac-cur: #44475a;
     drac-fgd: #f8f8f2;
@@ -16,12 +16,13 @@
     drac-red: #ff5555;
     drac-yel: #f1fa8c;
 
-    // set the defintions used by the themes
+    // Set the variables used by the themes
     background:     @drac-bgd;
     background-alt: @drac-cur;
     foreground:     @drac-fgd;
     foreground-alt: @drac-cmt;
     selected:       @drac-pur;
+    border:         @drac-pur;
     active:         @drac-cya;
     urgent:         @drac-ora;
     success:        @drac-grn;

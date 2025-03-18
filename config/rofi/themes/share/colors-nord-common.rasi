@@ -1,9 +1,9 @@
 /*
- * Color palette for the Nord color scheme.
+ * Common color palette definitions for the Nord schemes.
  */
 
 * {
-    // nord color palette
+    // Color palette
     nord0-polarnight: #2e3440ff;
     nord1-polarnight: #3b4252ff;
     nord2-polarnight: #434c5eff;

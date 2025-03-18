@@ -1,9 +1,9 @@
 /*
- * Color definitions for the Tokyo Night light color scheme.
+ * Color definitions for the Tokyo Night light scheme.
  */
 
 * {
-    // color palette
+    // Color palette
     tokyo-1:    #8c4351;  // This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red
     tokyo-2:    #965027;  // Number and Boolean constants, Language support constants
     tokyo-3:    #8f5e15;  // Function parameters, Regex character sets, Terminal Yellow
@@ -20,15 +20,16 @@
     tokyo-mrk:  #40434f;  // Markdown Text, HTML Text
     tokyo-cmt:  #6c6e75;  // Comments
     tokyo-blk:  #343B58;  // Terminal Black
-    tokyo-bg2:  #d3d4df;  // Editor Background (Alt)
+    tokyo-bg2:  #d3d4df;  // Editor Background (Alt, additional)
     tokyo-bg1:  #e6e7ed;  // Editor Background (Light)
 
-    // set the defintions used by the themes
+    // Set the variables used by the themes
     background:     @tokyo-bg1;
     background-alt: @tokyo-bg2;
     foreground:     @tokyo-fg;
     foreground-alt: @tokyo-mrk;
     selected:       @tokyo-cmt;
+    border:         @tokyo-cmt;
     active:         @tokyo-5;
     urgent:         @tokyo-2;
     success:        @tokyo-5;

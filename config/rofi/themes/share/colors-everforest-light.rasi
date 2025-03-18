@@ -1,9 +1,9 @@
 /*
- * Color definitions for the Everforest light color scheme.
+ * Color definitions for the Everforest light scheme.
  */
 
 * {
-    // hard color palette
+    // Hard color palette
     bg-dim:      #f2efdf;
     bg0:         #fffbef;
     bg1:         #f8f5e4;
@@ -18,7 +18,7 @@
     bg-yellow:   #fef2d5;
 
 /*
-    // medium color palette (default)
+    // Medium color palette (default)
     bg-dim:      #efebd4;
     bg0:         #fdf6e3;
     bg1:         #f4f0d9;
@@ -32,7 +32,7 @@
     bg-blue:     #e9f0e9;
     bg-yellow:   #faedcd;
 
-    // soft palette
+    // Soft color palette
     bg-dim:      #e5dfc5;
     bg0:         #f3ead3;
     bg1:         #eae4ca;
@@ -47,7 +47,7 @@
     bg-yellow:   #f1e4c5;
 */
 
-    // shared colors
+    // Shared colors
     fg:          #5c6a72;
     red:         #f85552;
     orange:      #f57d26;
@@ -63,12 +63,13 @@
     statusline2: #708089;
     statusline3: #e66868;
 
-    // set the defintions used by the themes
+    // Set the variables used by the themes
     background:     @bg0;
     background-alt: @bg2;
     foreground:     @fg;
     foreground-alt: @fg;
     selected:       @green;
+    border:         @green;
     active:         @purple;
     urgent:         @orange;
     success:        @statusline1;
