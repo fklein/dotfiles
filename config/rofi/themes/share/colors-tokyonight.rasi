@@ -1,0 +1,36 @@
+/*
+ * Color definitions for the Tokyo Night color scheme.
+ */
+
+* {
+    // color palette
+    tokyo-1:    #f7768e;  // This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red
+    tokyo-2:    #ff9e64;  // Number and Boolean constants, Language support constants
+    tokyo-3:    #e0af68;  // Function parameters, Regex character sets, Terminal Yellow
+    tokyo-4:    #cfc9c2;  // Parameters inside functions (semantic highlighting only)
+    tokyo-5:    #9ece6a;  // Strings, CSS class names
+    tokyo-6:    #73daca;  // Object literal keys, Markdown links, Terminal Green
+    tokyo-7:    #b4f9f8;  // Regex literal strings
+    tokyo-8:    #2ac3de;  // Language support functions, CSS HTML elements
+    tokyo-9:    #7dcfff;  // Object properties, Regex quantifiers and flags, Markdown headings, Terminal Cyan, Markdown code, Import/export keywords
+    tokyo-10:   #7aa2f7;  // Function names, CSS property names, Terminal Blue
+    tokyo-11:   #bb9af7;  // Control Keywords, Storage Types, Regex symbols and operators, HTML Attributes, Terminal Magenta
+    tokyo-12:   #c0caf5;  // Variables, Class names, Terminal White
+    tokyo-fg:   #a9b1d6;  // Editor Foreground
+    tokyo-mrk:  #9aa5ce;  // Markdown Text, HTML Text
+    tokyo-cmt:  #565f89;  // Comments
+    tokyo-blk:  #414868;  // Terminal Black
+    tokyo-bg2:  #24283b;  // Editor Background (Storm)
+    tokyo-bg1:  #1a1b26;  // Editor Background (Night)
+
+    // set the defintions used by the themes
+    background:     @tokyo-bg1;
+    background-alt: @tokyo-bg2;
+    foreground:     @tokyo-fg;
+    foreground-alt: @tokyo-mrk;
+    selected:       @tokyo-cmt;
+    active:         @tokyo-6;
+    urgent:         @tokyo-2;
+    success:        @tokyo-5;
+    error:          @tokyo-1;
+}
