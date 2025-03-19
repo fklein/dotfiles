@@ -228,7 +228,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # bindsym XF86AudioMicMute exec amixer sset Capture toggle
 
 # audio control
-# bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause 
+# bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 # Above line will also work for pausing
 # bindsym XF86AudioNext exec --no-startup-id playerctl next
 # bindsym XF86AudioPrev exec --no-startup-id playerctl previous
@@ -358,7 +358,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- $screenlocker
 # Set DPMS signaling timeout after 15 minutes (values are standby, suspend, off)
 exec --no-startup-id xset +dpms dpms 900 900 0
 
-# Enable screensaver and immediately lock the screen after 10 minutes 
+# Enable screensaver and immediately lock the screen after 10 minutes
 exec --no-startup-id xset s 600 0
 
 # Start XDG autostart .desktop files using dex (check /etc/xdg/autostart/)
@@ -375,6 +375,18 @@ exec --no-startup-id nm-applet
 # Run the picom compositor for transparency
 # exec --no-startup-id picom -f
 
+####################
+# Colors & Theming #
+####################
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
 ################
 # Bar settings #
 ################
@@ -384,4 +396,16 @@ exec --no-startup-id nm-applet
 bar {
     font pango: Noto Sans Regular 10
     status_command i3status
+
+    colors {
+        background #000000
+        statusline #ffffff
+        separator #666666
+
+        focused_workspace  #4c7899 #285577 #ffffff
+        active_workspace   #333333 #5f676a #ffffff
+        inactive_workspace #333333 #222222 #888888
+        urgent_workspace   #2f343a #900000 #ffffff
+        binding_mode       #2f343a #900000 #ffffff
+    }
 }
