@@ -271,6 +271,70 @@ mode "$modeResize" {
 
 bindsym $mod+r mode "$modeResize"
 
+#############
+# Gaps mode #
+#############
+
+set $modeGaps Gaps: (o)uter, (i)nner
+set $modeGapsOuter Outer gaps: Up or Down to change, 0 to reset (+Shift for global)
+set $modeGapsInner Inner gaps: Up or Down to change, 0 to reset (+Shift for global)
+
+bindsym $mod+Shift+g mode "$modeGaps"
+
+mode "$modeGaps" {
+    bindsym o      mode "$modeGapsOuter"
+    bindsym i      mode "$modeGapsInner"
+
+    # Back to normal: Enter or Escape or $mod+Shift+g
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Shift+g mode "default"
+}
+
+mode "$modeGapsOuter" {
+    # Shrink or grow the outer gaps on the current workspace
+    bindsym k gaps outer current plus 5
+    bindsym l gaps outer current minus 5
+    bindsym 0 gaps outer current set 0
+
+    # Shrink or grow the outer gaps on all workspaces
+    bindsym Shift+k gaps outer all plus 5
+    bindsym Shift+l gaps outer all minus 5
+    bindsym Shift+0 gaps outer all set 0
+
+    # Same bindings, but for the arrow keys
+    bindsym Up gaps outer current plus 5
+    bindsym Down gaps outer current minus 5
+    bindsym Shift+Up gaps outer all plus 5
+    bindsym Shift+Down gaps outer all minus 5
+
+    # Back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+mode "$modeGapsInner" {
+    # Shrink or grow the inner gaps on the current workspace
+    bindsym k gaps inner current plus 5
+    bindsym l gaps inner current minus 5
+    bindsym 0 gaps inner current set 0
+
+    # Shrink or grow the inner gaps on all workspaces
+    bindsym Shift+k gaps inner all plus 5
+    bindsym Shift+l gaps inner all minus 5
+    bindsym Shift+0 gaps inner all set 0
+
+    # Same bindings, but for the arrow keys
+    bindsym Up gaps inner current plus 5
+    bindsym Down gaps inner current minus 5
+    bindsym Shift+Up gaps inner all plus 5
+    bindsym Shift+Down gaps inner all minus 5
+
+    # Back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 ###############
 # Launch mode #
 ###############
