@@ -373,7 +373,7 @@ mode "$modeSysControl" {
     # Back to normal: Enter or Escape or $mod+BackSpace
     bindsym Return mode "default"
     bindsym Escape mode "default"
-    bindsym $mod+BackSpace mode "default"
+    bindsym $mod+Shift+s mode "default"
 }
 
 bindsym $mod+Shift+s mode "$modeSysControl"
@@ -491,5 +491,3 @@ bar {
         binding_mode         $drac-pnk   $drac-pnk   $drac-bgd
     }
 }
-
-# include share/dracula.theme
