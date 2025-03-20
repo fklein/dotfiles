@@ -6,7 +6,7 @@
 @import "colors.rasi"
 
 * {
-    font: "Noto Sans Nerd Font 10";
+    font: "Noto Sans Nerd Font Medium 10";
 }
 
 

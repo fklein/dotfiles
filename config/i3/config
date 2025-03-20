@@ -9,7 +9,7 @@
 set $mod Mod4
 
 # Font for window titles, will also be used by the bar unless overridden
-font pango: Noto Sans Regular 9
+font pango: Noto Sans Nerd Font Medium 9
 
 # Use tiling for new containers
 workspace_layout default
@@ -311,6 +311,7 @@ mode "$modeGapsOuter" {
     # Back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym $mod+Shift+g mode "default"
 }
 
 mode "$modeGapsInner" {
@@ -333,6 +334,7 @@ mode "$modeGapsInner" {
     # Back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym $mod+Shift+g mode "default"
 }
 
 ###############
@@ -473,7 +475,7 @@ client.background         $drac-bgd
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    font pango: Noto Sans Regular 10
+    font pango: Noto Sans Nerd Font Medium 10
     status_command i3status
 
     colors {
