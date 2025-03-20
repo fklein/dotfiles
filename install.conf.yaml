@@ -26,6 +26,11 @@
     ~/.config/:
         path: config/**
         glob: true
+        exclude:
+            - config/rofi/themes/share/**
+            - config/i3/share/**
+    ~/.config/rofi/themes/share: config/rofi/themes/share
+    ~/.config/i3/share: config/i3/share
     ~/.local/share:
         path: local/share/**
         glob: true
