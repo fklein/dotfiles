@@ -35,7 +35,7 @@ window {
 }
 
 mainbox {
-    border:         1px;
+    border:         2px;
     border-color:   @border;
 }
 

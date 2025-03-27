@@ -26,7 +26,7 @@ gaps outer 0
 smart_gaps off
 
 # Border settings
-default_border normal 1
+default_border normal 2
 hide_edge_borders smart
 
 # Do not move focus to mouse pointer
@@ -414,7 +414,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 
 # Start dunst for notifications
-# exec --no-startup-id /usr/bin/dunst
+exec --no-startup-id /usr/bin/dunst
 
 # Run the picom compositor for transparency
 # exec --no-startup-id picom -f
@@ -423,28 +423,42 @@ exec --no-startup-id pasystray
 # Colors & Theming #
 ####################
 
-# Dracula color palette
-set $drac-bgd #282a36
-set $drac-cur #44475a
-set $drac-fgd #f8f8f2
-set $drac-cmt #6272a4
-set $drac-cya #8be9fd
-set $drac-grn #50fa7b
-set $drac-ora #ffb86c
-set $drac-pnk #ff79c6
-set $drac-pur #bd93f9
-set $drac-red #ff5555
-set $drac-yel #f1fa8c
-set $drac-gry #bfbfbf
+# Catppuccin Mocha color palette
+set $rosewater  #f5e0dc
+set $flamingo   #f2cdcd
+set $pink       #f5c2e7
+set $mauve      #cba6f7
+set $red        #f38ba8
+set $maroon     #eba0ac
+set $peach      #fab387
+set $yellow     #f9e2af
+set $green      #a6e3a1
+set $teal       #94e2d5
+set $sky        #89dceb
+set $sapphire   #74c7ec
+set $blue       #89b4fa
+set $lavender   #b4befe
+set $text       #cdd6f4
+set $subtext1   #bac2de
+set $subtext0   #a6adc8
+set $overlay2   #9399b2
+set $overlay1   #7f849c
+set $overlay0   #6c7086
+set $surface2   #585b70
+set $surface1   #45475a
+set $surface0   #313244
+set $base       #1e1e2e
+set $mantle     #181825
+set $crust      #11111b
 
-# Class                   # Border    # Backgr.   # Text      # Indic.    # Child border
-client.focused            $drac-pur   $drac-pur   $drac-bgd   $drac-pur   $drac-pur
-client.focused_inactive   $drac-cmt   $drac-cmt   $drac-fgd   $drac-cmt   $drac-cmtF
-client.unfocused          $drac-cur   $drac-cur   $drac-fgd   $drac-cur   $drac-cur
-client.urgent             $drac-red   $drac-re    $drac-bgd   $drac-red   $drac-red
-client.placeholder        #000000     $drac-bgd   $drac-fgd   #000000     $drac-cur
+# Class                  # Border    # Backgr.  # Text     # Indic.    # Child border
+client.focused           $lavender   $lavender  $base      $lavender   $lavender
+client.focused_inactive  $surface1   $surface1  $subtext1  $surface1   $surface1
+client.unfocused         $surface0   $surface0  $subtext0  $surface0   $surface0
+client.urgent            $peach      $peach     $base      $peach      $peach
+client.placeholder       #000000     $overlay0  $text      #000000     $overlay0
 
-client.background         $drac-bgd
+client.background        $base
 
 ################
 # Bar settings #
@@ -457,15 +471,15 @@ bar {
     status_command i3status
 
     colors {
-        background           $drac-bgd
-        statusline           $drac-fgd
-        separator            $drac-cur
+        background         $base
+        statusline         $text
+        separator          $surface1
 
         # Class              # Border    # Backgr.   # Text
-        focused_workspace    $drac-cya   $drac-cya   $drac-bgd
-        active_workspace     $drac-cmt   $drac-cmt   $drac-fgd
-        inactive_workspace   $drac-bgd   $drac-cur   $drac-gry
-        urgent_workspace     $drac-red   $drac-red   $drac-fgd
-        binding_mode         $drac-pnk   $drac-pnk   $drac-bgd
+        focused_workspace    $mauve      $mauve      $base
+        active_workspace     $base       $surface2   $base
+        inactive_workspace   $base       $surface0   $subtext0
+        urgent_workspace     $peach      $peach      $base
+        binding_mode         $maroon     $maroon     $base
     }
 }

@@ -1,0 +1,36 @@
+# Dracula color palette
+set $drac-bgd #282a36
+set $drac-cur #44475a
+set $drac-fgd #f8f8f2
+set $drac-cmt #6272a4
+set $drac-cya #8be9fd
+set $drac-grn #50fa7b
+set $drac-ora #ffb86c
+set $drac-pnk #ff79c6
+set $drac-pur #bd93f9
+set $drac-red #ff5555
+set $drac-yel #f1fa8c
+set $drac-gry #bfbfbf
+
+# Class                   # Border    # Backgr.   # Text      # Indic.    # Child border
+client.focused            $drac-pur   $drac-pur   $drac-bgd   $drac-pur   $drac-pur
+client.focused_inactive   $drac-cmt   $drac-cmt   $drac-fgd   $drac-cmt   $drac-cmtF
+client.unfocused          $drac-cur   $drac-cur   $drac-fgd   $drac-cur   $drac-cur
+client.urgent             $drac-red   $drac-re    $drac-bgd   $drac-red   $drac-red
+client.placeholder        #000000     $drac-bgd   $drac-fgd   #000000     $drac-cur
+client.background         $drac-bgd
+
+bar {
+     colors {
+        background           $drac-bgd
+        statusline           $drac-fgd
+        separator            $drac-cur
+
+        # Class              # Border    # Backgr.   # Text
+        focused_workspace    $drac-cya   $drac-cya   $drac-bgd
+        active_workspace     $drac-cmt   $drac-cmt   $drac-fgd
+        inactive_workspace   $drac-bgd   $drac-cur   $drac-gry
+        urgent_workspace     $drac-red   $drac-red   $drac-fgd
+        binding_mode         $drac-pnk   $drac-pnk   $drac-bgd
+    }
+}

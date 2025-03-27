@@ -6,13 +6,16 @@
 // @import "colors-nord-bright.rasi"
 // @import "colors-everforest-dark.rasi"
 // @import "colors-everforest-light.rasi"
-@import "colors-dracula.rasi"
+// @import "colors-dracula.rasi"
 // @import "colors-tokyonight.rasi"
 // @import "colors-tokyonight-light.rasi"
+// @import "colors-catppuccin-latte.rasi"
+@import "colors-catppuccin-mocha.rasi"
 
-/*
 * {
     // Make all main borders disappear by setting it to the background color.
-    border: @background;
+    // border: @background;
+
+    // Make all main border less prominent by using the alternative background color.
+    // border: @background-alt;
 }
-*/

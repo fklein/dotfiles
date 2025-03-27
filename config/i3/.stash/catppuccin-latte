@@ -1,0 +1,52 @@
+# Catppuccin Latte color palette
+set $rosewater  #dc8a78
+set $flamingo   #dd7878
+set $pink       #ea76cb
+set $mauve      #8839ef
+set $red        #d20f39
+set $maroon     #e64553
+set $peach      #fe640b
+set $yellow     #df8e1d
+set $green      #40a02b
+set $teal       #179299
+set $sky        #04a5e5
+set $sapphire   #209fb5
+set $blue       #1e66f5
+set $lavender   #7287fd
+set $text       #4c4f69
+set $subtext1   #5c5f77
+set $subtext0   #6c6f85
+set $overlay2   #7c7f93
+set $overlay1   #8c8fa1
+set $overlay0   #9ca0b0
+set $surface2   #acb0be
+set $surface1   #bcc0cc
+set $surface0   #ccd0da
+set $base       #eff1f5
+set $mantle     #e6e9ef
+set $crust      #dce0e8
+
+# Class                  # Border    # Backgr.  # Text     # Indic.    # Child border
+client.focused           $lavender   $lavender  $base      $lavender   $lavender
+client.focused_inactive  $surface1   $surface1  $subtext1  $surface1   $surface1
+client.unfocused         $surface0   $surface0  $subtext0  $surface0   $surface0
+client.urgent            $peach      $peach     $base      $peach      $peach
+client.placeholder       #000000     $overlay0  $text      #000000     $overlay0
+
+client.background        $base
+
+
+bar {
+    colors {
+        background         $base
+        statusline         $text
+        separator          $surface1
+
+        # Class              # Border    # Backgr.   # Text
+        focused_workspace    $mauve      $mauve      $base
+        active_workspace     $base       $surface2   $base
+        inactive_workspace   $base       $surface0   $subtext0
+        urgent_workspace     $peach      $peach      $base
+        binding_mode         $maroon     $maroon     $base
+    }
+}
