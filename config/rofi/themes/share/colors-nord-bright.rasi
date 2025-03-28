@@ -9,11 +9,11 @@
     background:     @nord6-snowstorm;
     background-alt: @nord4-snowstorm;
     foreground:     @nord0-polarnight;
-    foreground-alt: @nord3-polarnight;
-    selected:       @nord7-frost; // @nord8-frost
-    border:         @nord7-frost;
+    foreground-alt: @nord2-polarnight;
+    selected:       @nord8-frost; // @nord9-frost
+    border:         @nord8-frost;
     active:         @nord15-aurora;
-    urgent:         @nord12-aurora;
+    urgent:         @nord13-aurora;
     success:        @nord14-aurora;
     error:          @nord11-aurora;
 }

@@ -1,0 +1,42 @@
+# Nord color palette
+set $nord0-polar    #2e3440
+set $nord1-polar    #3b4252
+set $nord2-polar    #434c5e
+set $nord3-polar    #4c566a
+set $nord4-snow     #d8dee9
+set $nord5-snow     #e5e9f0
+set $nord6-snow     #eceff4
+set $nord7-frost    #8fbcbb
+set $nord8-frost    #88c0d0
+set $nord9-frost    #81a1c1
+set $nord10-frost   #5e81ac
+set $nord11-aurora  #bf616a
+set $nord12-aurora  #d08770
+set $nord13-aurora  #ebcb8b
+set $nord14-aurora  #a3be8c
+set $nord15-aurora  #b48ead
+
+# Class                  # Border        # Backgr.       # Text        # Indic.        # Child border
+client.focused           $nord8-frost    $nord8-frost    $nord0-polar  $nord8-frost    $nord8-frost
+client.focused_inactive  $nord3-polar    $nord3-polar    $nord5-snow   $nord3-polar    $nord3-polar
+client.unfocused         $nord1-polar    $nord1-polar    $nord4-snow   $nord1-polar    $nord1-polar
+client.urgent            $nord13-aurora  $nord13-aurora  $nord0-polar  $nord13-aurora  $nord13-aurora
+client.placeholder       #000000         $nord15-aurora  $nord0-polar  #000000         $nord15-aurora
+
+client.background        $nord0-polar
+
+
+bar {
+    colors {
+        background         $nord0-polar
+        statusline         $nord6-snow
+        separator          $nord3-polar
+
+        # Class              # Border        # Backgr.       # Text
+        focused_workspace    $nord9-frost    $nord9-frost    $nord0-polar
+        active_workspace     $nord0-polar    $nord3-polar    $nord5-snow
+        inactive_workspace   $nord0-polar    $nord1-polar    $nord4-snow
+        urgent_workspace     $nord13-aurora  $nord13-aurora  $nord0-polar
+        binding_mode         $nord15-aurora  $nord15-aurora  $nord0-polar
+    }
+}

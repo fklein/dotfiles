@@ -7,12 +7,12 @@
 * {
     // Set the variables used by the themes
     background:     @nord0-polarnight;
-    background-alt: @nord2-polarnight;
+    background-alt: @nord1-polarnight;
     foreground:     @nord6-snowstorm;
     foreground-alt: @nord4-snowstorm;
     selected:       @nord8-frost; // @nord9-frost
     border:         @nord8-frost;
-    active:         @nord14-aurora;
+    active:         @nord15-aurora;
     urgent:         @nord13-aurora;
     success:        @nord14-aurora;
     error:          @nord11-aurora;

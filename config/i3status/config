@@ -13,14 +13,19 @@ general {
     colors          = true
 
 # For Catpuccin Mocha
-    color_good      = '#a6e3a1'
-    color_degraded  = '#fab387'
-    color_bad       = '#f38ba8'
+#    color_good      = '#a6e3a1'
+#    color_degraded  = '#fab387'
+#    color_bad       = '#f38ba8'
 
 # For Catppuccin Latte
 #    color_good      = '#40a02b'
 #    color_degraded  = '#fe640b'
 #    color_bad       = '#d20f39'
+
+# For Nord dark and bright
+    color_good      = '#a3be8c'
+    color_degraded  = '#ebcb8b'
+    color_bad       = '#bf616a'
 }
 
 order += "volume master"
