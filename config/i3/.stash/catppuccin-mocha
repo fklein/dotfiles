@@ -26,7 +26,6 @@ set $base       #1e1e2e
 set $mantle     #181825
 set $crust      #11111b
 
-# Class                  # Border    # Backgr.  # Text  # Indic.    # Child border
 # Class                  # Border    # Backgr.  # Text     # Indic.    # Child border
 client.focused           $lavender   $lavender  $base      $lavender   $lavender
 client.focused_inactive  $surface1   $surface1  $subtext1  $surface1   $surface1
