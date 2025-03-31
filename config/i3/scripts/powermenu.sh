@@ -4,7 +4,7 @@
 
 # Current Theme
 themeDir="${HOME}/.config/rofi/themes/share"
-themeFile=${1:-"powermenu-style5.rasi"}
+themeFile=${1:-"powermenu-default.rasi"}
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
