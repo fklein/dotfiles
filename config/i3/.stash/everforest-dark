@@ -1,0 +1,84 @@
+# Everforest dark color palette
+
+# Medium color palette (default)
+# set $bg-dim      #232a2e
+# set $bg0         #2d353b
+# set $bg1         #343f44
+# set $bg2         #3d484d
+# set $bg3         #475258
+# set $bg4         #4f585e
+# set $bg5         #56635f
+# set $bg-visual   #543a48
+# set $bg-red      #514045
+# set $bg-green    #425047
+# set $bg-blue     #3a515d
+# set $bg-yellow   #4d4c43
+#
+# Soft color palette
+# set $bg-dim      #293136
+# set $bg0         #333c43
+# set $bg1         #3a464c
+# set $bg2         #434f55
+# set $bg3         #4d5960
+# set $bg4         #555f66
+# set $bg5         #5d6b66
+# set $bg-visual   #5c3f4f
+# set $bg-red      #59464c
+# set $bg-green    #48584e
+# set $bg-blue     #3f5865
+# set $bg-yellow   #55544a
+
+# Hard color palette
+set $bg-dim      #1e2326
+set $bg0         #272e33
+set $bg1         #2e383c
+set $bg2         #374145
+set $bg3         #414b50
+set $bg4         #495156
+set $bg5         #4f5b58
+set $bg-visual   #4c3743
+set $bg-red      #493b40
+set $bg-green    #3c4841
+set $bg-blue     #384b55
+set $bg-yellow   #45443c
+
+# Shared colors
+set $fg          #d3c6aa
+set $red         #e67e80
+set $orange      #e69875
+set $yellow      #dbbc7f
+set $green       #a7c080
+set $aqua        #83c092
+set $blue        #7fbbb3
+set $purple      #d699b6
+set $grey0       #7a8478
+set $grey1       #859289
+set $grey2       #9da9a0
+set $statusline1 #a7c080
+set $statusline2 #d3c6aa
+set $statusline3 #e67e80
+
+# Class                  # Border    # Backgr.  # Text     # Indic.    # Child border
+client.focused           $green      $green     $bg0       $green      $green
+client.focused_inactive  $bg-green   $bg-green  $fg        $bg-green   $bg-green
+client.unfocused         $bg1        $bg1       $fg        $bg1        $bg1
+client.urgent            $orange     $orange    $bg0       $orange     $orange
+client.placeholder       #000000     $bg-dim    $fg        #000000     $bg-dim
+
+client.background        $bg0
+
+
+bar {
+    colors {
+        background         $bg0
+        statusline         $fg
+        separator          $bg3
+
+        # Class              # Border    # Backgr.   # Text
+        focused_workspace    $blue       $blue       $bg0
+        active_workspace     $bg0        $bg-blue    $fg
+        inactive_workspace   $bg0        $bg2        $fg
+        urgent_workspace     $orange     $orange     $bg0
+        binding_mode         $purple     $purple     $bg0
+    }
+}

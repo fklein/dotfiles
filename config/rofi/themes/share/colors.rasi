@@ -2,9 +2,9 @@
  * Shared color definitions for multiple themes.
  */
 
-@import "colors-nord-dark.rasi"
+// @import "colors-nord-dark.rasi"
 // @import "colors-nord-bright.rasi"
-// @import "colors-everforest-dark.rasi"
+@import "colors-everforest-dark.rasi"
 // @import "colors-everforest-light.rasi"
 // @import "colors-dracula.rasi"
 // @import "colors-tokyonight.rasi"

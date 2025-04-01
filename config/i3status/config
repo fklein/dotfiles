@@ -23,9 +23,19 @@ general {
 #    color_bad       = '#d20f39'
 
 # For Nord dark and bright
-    color_good      = '#a3be8c'
-    color_degraded  = '#ebcb8b'
-    color_bad       = '#bf616a'
+#    color_good      = '#a3be8c'
+#    color_degraded  = '#ebcb8b'
+#    color_bad       = '#bf616a'
+
+# For Everforest dark
+    color_good      = '#a7c080'
+    color_degraded  = '#dbbc7f'
+    color_bad       = '#e67e80'
+
+# For Everforest light
+#    color_good      = '#8da101'
+#    color_degraded  = '#dfa000'
+#    color_bad       = '#f85552'
 }
 
 order += "volume master"

@@ -67,7 +67,7 @@
     background:     @bg0;
     background-alt: @bg2;
     foreground:     @fg;
-    foreground-alt: @fg;
+    foreground-alt: @statusline2;
     selected:       @green;
     border:         @green;
     active:         @purple;
