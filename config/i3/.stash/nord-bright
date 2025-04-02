@@ -1,42 +1,42 @@
 # Nord color palette
-set $nord0-polar    #2e3440
-set $nord1-polar    #3b4252
-set $nord2-polar    #434c5e
-set $nord3-polar    #4c566a
-set $nord4-snow     #d8dee9
-set $nord5-snow     #e5e9f0
-set $nord6-snow     #eceff4
-set $nord7-frost    #8fbcbb
-set $nord8-frost    #88c0d0
-set $nord9-frost    #81a1c1
-set $nord10-frost   #5e81ac
-set $nord11-aurora  #bf616a
-set $nord12-aurora  #d08770
-set $nord13-aurora  #ebcb8b
-set $nord14-aurora  #a3be8c
-set $nord15-aurora  #b48ead
+set $nord0-polar   #2e3440
+set $nord1-polar   #3b4252
+set $nord2-polar   #434c5e
+set $nord3-polar   #4c566a
+set $nord4-snow    #d8dee9
+set $nord5-snow    #e5e9f0
+set $nord6-snow    #eceff4
+set $nord7-frost   #8fbcbb
+set $nord8-frost   #88c0d0
+set $nord9-frost   #81a1c1
+set $nord10-frost  #5e81ac
+set $nord11-aurora #bf616a
+set $nord12-aurora #d08770
+set $nord13-aurora #ebcb8b
+set $nord14-aurora #a3be8c
+set $nord15-aurora #b48ead
 
-# Class                  # Border        # Backgr.       # Text        # Indic.        # Child border
+# Target                 # Border        # Backgr.       # Text        # Indic.        # Child border
 client.focused           $nord8-frost    $nord8-frost    $nord6-snow   $nord8-frost    $nord8-frost
 client.focused_inactive  $nord4-snow     $nord4-snow     $nord1-polar  $nord4-snow     $nord4-snow
-client.unfocused         $nord6-snow     $nord6-snow     $nord3-polar  $nord6-snow     $nord6-snow
+client.unfocused         $nord5-snow     $nord5-snow     $nord2-polar  $nord5-snow     $nord6-snow
 client.urgent            $nord13-aurora  $nord13-aurora  $nord6-snow   $nord13-aurora  $nord13-aurora
-client.placeholder       #000000         $nord15-aurora  $nord6-snow   #000000         $nord15-aurora
+client.placeholder       #000000         $nord4-snow     $nord0-polar  #000000         $nord4-snow
 
 client.background        $nord6-snow
 
 
 bar {
     colors {
-        background         $nord6-snow
-        statusline         $nord0-polar
-        separator          $nord4-snow
+        background          $nord6-snow
+        statusline          $nord0-polar
+        separator           $nord4-snow
 
-        # Class              # Border        # Backgr.       # Text
-        focused_workspace    $nord9-frost    $nord9-frost    $nord6-snow
-        active_workspace     $nord6-snow     $nord4-snow     $nord15-aurora
-        inactive_workspace   $nord6-snow     $nord4-snow     $nord1-polar
-        urgent_workspace     $nord13-aurora  $nord13-aurora  $nord6-snow
-        binding_mode         $nord15-aurora  $nord15-aurora  $nord6-snow
+        # Target            # Border      # Backgr.       # Text
+        focused_workspace   $nord9-frost  $nord9-frost    $nord6-snow
+        active_workspace    $nord6-snow   $nord3-polar    $nord5-snow
+        inactive_workspace  $nord6-snow   $nord4-snow     $nord2-polar
+        urgent_workspace    $nord6-snow   $nord13-aurora  $nord6-snow
+        binding_mode        $nord6-snow   $nord15-aurora  $nord6-snow
     }
 }

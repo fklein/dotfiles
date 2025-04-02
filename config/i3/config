@@ -8,9 +8,6 @@
 # Set the mod key to the Windows key
 set $mod Mod4
 
-# Font for window titles, will also be used by the bar unless overridden
-font pango: Noto Sans Nerd Font Medium 9
-
 # Use tiling for new containers
 workspace_layout default
 
@@ -121,7 +118,9 @@ bindsym $mod+d exec --no-startup-id "rofi -show drun \
 # Window switcher with rofi (key above tab)
 bindcode $mod+49 exec --no-startup-id "rofi -show window \
     -modi window \
-    -theme ~/.config/rofi/themes/launcher-squared.rasi"
+    -theme ~/.config/rofi/themes/launcher-plain.rasi \
+    -theme-str 'window { width: 500px; }' \
+    -theme-str 'listview { columns: 1; fixed-height: false; }'"
 
 # Show a fancy power menu with rofi
 bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/powermenu.sh
@@ -430,46 +429,45 @@ exec --no-startup-id /usr/bin/dunst
 # Colors & Theming #
 ####################
 
-# Everforest dark color palette
+# Font for window titles, will also be used by the bar unless overridden
+font pango: Noto Sans Nerd Font Medium 9
 
-# Hard color palette
-set $bg-dim      #1e2326
-set $bg0         #272e33
-set $bg1         #2e383c
-set $bg2         #374145
-set $bg3         #414b50
-set $bg4         #495156
-set $bg5         #4f5b58
-set $bg-visual   #4c3743
-set $bg-red      #493b40
-set $bg-green    #3c4841
-set $bg-blue     #384b55
-set $bg-yellow   #45443c
+# Catppuccin Macchiato color palette
+set $rosewater #f4dbd6
+set $flamingo  #f0c6c6
+set $pink      #f5bde6
+set $mauve     #c6a0f6
+set $red       #ed8796
+set $maroon    #ee99a0
+set $peach     #f5a97f
+set $yellow    #eed49f
+set $green     #a6da95
+set $teal      #8bd5ca
+set $sky       #91d7e3
+set $sapphire  #7dc4e4
+set $blue      #8aadf4
+set $lavender  #b7bdf8
+set $text      #cad3f5
+set $subtext1  #b8c0e0
+set $subtext0  #a5adcb
+set $overlay2  #939ab7
+set $overlay1  #8087a2
+set $overlay0  #6e738d
+set $surface2  #5b6078
+set $surface1  #494d64
+set $surface0  #363a4f
+set $base      #24273a
+set $mantle    #1e2030
+set $crust     #181926
 
-# Shared colors
-set $fg          #d3c6aa
-set $red         #e67e80
-set $orange      #e69875
-set $yellow      #dbbc7f
-set $green       #a7c080
-set $aqua        #83c092
-set $blue        #7fbbb3
-set $purple      #d699b6
-set $grey0       #7a8478
-set $grey1       #859289
-set $grey2       #9da9a0
-set $statusline1 #a7c080
-set $statusline2 #d3c6aa
-set $statusline3 #e67e80
+# Target                 # Border    # Backgr.  # Text     # Indic.    # Child border
+client.focused           $lavender   $lavender  $base      $lavender   $lavender
+client.focused_inactive  $surface1   $surface1  $subtext1  $surface1   $surface1
+client.unfocused         $surface0   $surface0  $subtext0  $surface0   $surface0
+client.urgent            $peach      $peach     $base      $peach      $peach
+client.placeholder       #000000     $overlay0  $text      #000000     $overlay0
 
-# Class                  # Border    # Backgr.  # Text     # Indic.    # Child border
-client.focused           $green      $green     $bg0       $green      $green
-client.focused_inactive  $bg-green   $bg-green  $fg        $bg-green   $bg-green
-client.unfocused         $bg1        $bg1       $fg        $bg1        $bg1
-client.urgent            $orange     $orange    $bg0       $orange     $orange
-client.placeholder       #000000     $bg-dim    $fg        #000000     $bg-dim
-
-client.background        $bg0
+client.background        $base
 
 ################
 # Bar settings #
@@ -482,15 +480,15 @@ bar {
     status_command i3status
 
     colors {
-        background         $bg0
-        statusline         $fg
-        separator          $bg3
+        background          $base
+        statusline          $text
+        separator           $surface2
 
-        # Class              # Border    # Backgr.   # Text
-        focused_workspace    $blue       $blue       $bg0
-        active_workspace     $bg0        $bg-blue    $fg
-        inactive_workspace   $bg0        $bg2        $fg
-        urgent_workspace     $orange     $orange     $bg0
-        binding_mode         $purple     $purple     $bg0
+        # Target            # Border   # Backgr.  # Text
+        focused_workspace   $sapphire  $sapphire  $crust
+        active_workspace    $base      $surface2  $text
+        inactive_workspace  $base      $surface0  $subtext0
+        urgent_workspace    $base      $peach     $crust
+        binding_mode        $base      $mauve     $crust
     }
 }

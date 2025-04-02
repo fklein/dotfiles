@@ -38,9 +38,9 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
+    border:                      2px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @border;
     background-color:            @background;
     cursor:                      "default";
 }
@@ -51,9 +51,9 @@ mainbox {
     spacing:                     10px;
     margin:                      0px;
     padding:                     20px;
-    border:                      2px solid;
+    border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
-    border-color:                @border;
+    border-color:                @selected;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
 }
@@ -69,8 +69,6 @@ inputbar {
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  @foreground;
-    // background-color:            @foreground;
-    // text-color:                  @background;
     children:                    [ "prompt", "entry" ];
 }
 
@@ -110,6 +108,7 @@ listview {
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
+    active-color:                @selected;
     cursor:                      "default";
 }
 

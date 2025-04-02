@@ -12,30 +12,25 @@ general {
     interval        = 1
     colors          = true
 
-# For Catpuccin Mocha
+# For Catppuccin Macchiato
+    color_good      = '#a6da95'
+    color_degraded  = '#f5a97f'
+    color_bad       = '#ed8796'
+
+# For Catppuccin Mocha
 #    color_good      = '#a6e3a1'
 #    color_degraded  = '#fab387'
 #    color_bad       = '#f38ba8'
-
-# For Catppuccin Latte
-#    color_good      = '#40a02b'
-#    color_degraded  = '#fe640b'
-#    color_bad       = '#d20f39'
-
+#
 # For Nord dark and bright
 #    color_good      = '#a3be8c'
-#    color_degraded  = '#ebcb8b'
+#    color_degraded  = '#d08770'
 #    color_bad       = '#bf616a'
-
+#
 # For Everforest dark
-    color_good      = '#a7c080'
-    color_degraded  = '#dbbc7f'
-    color_bad       = '#e67e80'
-
-# For Everforest light
-#    color_good      = '#8da101'
-#    color_degraded  = '#dfa000'
-#    color_bad       = '#f85552'
+#    color_good      = '#a7c080'
+#    color_degraded  = '#e69875'
+#    color_bad       = '#e67e80'
 }
 
 order += "volume master"
@@ -103,7 +98,7 @@ cpu_temperature 0 {
 
 disk "/" {
     format = " %avail"
-    prefix_type    = custom
+    prefix_type = custom
     low_threshold = 20
     threshold_type = percentage_avail
 }

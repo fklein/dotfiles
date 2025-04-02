@@ -1,21 +1,18 @@
 [global]
-frame_color = "#b4befe"
-separator_color= frame
-highlight = "#89b4fa"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#b4befe"
+    separator_color= frame
+    highlight = "#89b4fa"
 
 [urgency_low]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
-frame_color = "#45475a"
+    frame_color = "#45475a"
 
 [urgency_normal]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
+    foreground = "#cdd6f4"
 
 [urgency_critical]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
-frame_color = "#fab387"
+    frame_color = "#fab387"
 
 # Catppuccin Mocha color palette for reference
 # rosewater: #f5e0dc

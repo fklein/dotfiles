@@ -38,7 +38,7 @@
     foreground-alt: @subtext1;
     selected:       @sapphire;
     border:         @lavender;
-    active:         @teal;
+    active:         @mauve;
     urgent:         @peach;
     success:        @green;
     error:          @red;

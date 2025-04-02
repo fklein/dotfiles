@@ -38,14 +38,12 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 1
-    frame_color = "#7f3fbf"
     gap_size = 0
-    separator_color = auto
     sort = yes
     idle_threshold = 0
 
     ### Text ###
-    font = Noto Sans Nerd Font Medium 9
+    font = Noto Sans Nerd Font Medium 10
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
@@ -85,80 +83,19 @@
     mouse_left_click = close_current
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
-frame_color = "#a7c080"
-separator_color= frame
-highlight = "#7fbbb3"
+
+    # Colors (Catppuccin Macchiato)
+    background = "#24273a"
+    foreground = "#cad3f5"
+    frame_color = "#b7bdf8"
+    separator_color= frame
+    highlight = "#8aadf4"
 
 [urgency_low]
-    background = "#272e33"
-    foreground = "#d3c6aa"
-    frame_color = "#374145"
+    frame_color = "#494d64"
 
 [urgency_normal]
-    background = "#272e33"
-    foreground = "#d3c6aa"
+    foreground = "#cad3f5"
 
 [urgency_critical]
-    background = "#272e33"
-    foreground = "#d3c6aa"
-    frame_color = "#e69875"
-
-# Everforest dark color palette for reference
-#
-# // Shared colors
-# fg:          #d3c6aa;
-# red:         #e67e80;
-# orange:      #e69875;
-# yellow:      #dbbc7f;
-# green:       #a7c080;
-# aqua:        #83c092;
-# blue:        #7fbbb3;
-# purple:      #d699b6;
-# grey0:       #7a8478;
-# grey1:       #859289;
-# grey2:       #9da9a0;
-# statusline1: #a7c080;
-# statusline2: #d3c6aa;
-# statusline3: #e67e80;
-#
-# // Hard color palette
-# bg-dim:      #1e2326;
-# bg0:         #272e33;
-# bg1:         #2e383c;
-# bg2:         #374145;
-# bg3:         #414b50;
-# bg4:         #495156;
-# bg5:         #4f5b58;
-# bg-visual:   #4c3743;
-# bg-red:      #493b40;
-# bg-green:    #3c4841;
-# bg-blue:     #384b55;
-# bg-yellow:   #45443c;
-#
-# // Medium color palette (default)
-# bg-dim:      #232a2e;
-# bg0:         #2d353b;
-# bg1:         #343f44;
-# bg2:         #3d484d;
-# bg3:         #475258;
-# bg4:         #4f585e;
-# bg5:         #56635f;
-# bg-visual:   #543a48;
-# bg-red:      #514045;
-# bg-green:    #425047;
-# bg-blue:     #3a515d;
-# bg-yellow:   #4d4c43;
-#
-# // Soft color palette
-# bg-dim:      #293136;
-# bg0:         #333c43;
-# bg1:         #3a464c;
-# bg2:         #434f55;
-# bg3:         #4d5960;
-# bg4:         #555f66;
-# bg5:         #5d6b66;
-# bg-visual:   #5c3f4f;
-# bg-red:      #59464c;
-# bg-green:    #48584e;
-# bg-blue:     #3f5865;
-# bg-yellow:   #55544a;
+    frame_color = "#f5a97f"

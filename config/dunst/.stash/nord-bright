@@ -1,36 +1,33 @@
 [global]
-frame_color = "#88c0d0"
-separator_color= frame
-highlight = "#81a1c1"
+    background = "#eceff4"
+    foreground = "#2e3440"
+    frame_color = "#88c0d0"
+    separator_color= frame
+    highlight = "#ebcb8b"
 
 [urgency_low]
-background = "#2e3440"
-foreground = "#eceff4"
-frame_color = "#4c566a"
+    frame_color = "#d8dee9"
 
 [urgency_normal]
-background = "#2e3440"
-foreground = "#eceff4"
+    foreground = "#2e3440"
 
 [urgency_critical]
-background = "#2e3440"
-foreground = "#eceff4"
-frame_color = "#ebcb8b"
+    frame_color = "#ebcb8b"
 
 # Nord color palette for reference
-# nord0-polarnight: #2e3440;
-# nord1-polarnight: #3b4252;
-# nord2-polarnight: #434c5e;
-# nord3-polarnight: #4c566a;
-# nord4-snowstorm:  #d8dee9;
-# nord5-snowstorm:  #e5e9f0;
-# nord6-snowstorm:  #eceff4;
-# nord7-frost:      #8fbcbb;
-# nord8-frost:      #88c0d0;
-# nord9-frost:      #81a1c1;
-# nord10-frost:     #5e81ac;
-# nord11-aurora:    #bf616a;
-# nord12-aurora:    #d08770;
-# nord13-aurora:    #ebcb8b;
-# nord14-aurora:    #a3be8c;
-# nord15-aurora:    #b48ead;
+# nord0-polarnight: #2e3440
+# nord1-polarnight: #3b4252
+# nord2-polarnight: #434c5e
+# nord3-polarnight: #4c566a
+# nord4-snowstorm:  #d8dee9
+# nord5-snowstorm:  #e5e9f0
+# nord6-snowstorm:  #eceff4
+# nord7-frost:      #8fbcbb
+# nord8-frost:      #88c0d0
+# nord9-frost:      #81a1c1
+# nord10-frost:     #5e81ac
+# nord11-aurora:    #bf616a
+# nord12-aurora:    #d08770
+# nord13-aurora:    #ebcb8b
+# nord14-aurora:    #a3be8c
+# nord15-aurora:    #b48ead

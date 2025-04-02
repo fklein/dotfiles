@@ -16,7 +16,6 @@ configuration {
 
 /*****----- Main Window -----*****/
 window {
-    /* properties for window widget */
     transparency:                "real";
     location:                    center;
     anchor:                      center;
@@ -25,15 +24,14 @@ window {
     x-offset:                    0px;
     y-offset:                    0px;
 
-    /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
+    border:                      2px solid;
     border-radius:               0px;
-    border-color:                @selected;
-    cursor:                      "default";
+    border-color:                @border;
     background-color:            @background;
+    cursor:                      "default";
 }
 
 /*****----- Main Box -----*****/
@@ -42,9 +40,9 @@ mainbox {
     spacing:                     10px;
     margin:                      0px;
     padding:                     20px;
-    border:                      2px solid;
+    border:                      0px solid;
     border-radius:               0px;
-    border-color:                @border;
+    border-color:                @selected;
     background-color:            transparent;
     children:                    [ "inputbar", "message", "listview" ];
 }
@@ -60,7 +58,7 @@ inputbar {
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
-    children:                    [ "textbox-prompt-colon", dummy, "prompt"];
+    children:                    [ "textbox-prompt-colon", dummy, "prompt" ];
 }
 
 dummy {
@@ -76,6 +74,7 @@ textbox-prompt-colon {
     background-color:            @error;
     text-color:                  @background;
 }
+
 prompt {
     enabled:                     true;
     padding:                     10px;
@@ -95,6 +94,7 @@ message {
     background-color:            @background-alt;
     text-color:                  @foreground;
 }
+
 textbox {
     background-color:            inherit;
     text-color:                  inherit;
@@ -104,6 +104,7 @@ textbox {
     blink:                       true;
     markup:                      true;
 }
+
 error-message {
     padding:                     10px;
     border:                      0px solid;
@@ -150,6 +151,7 @@ element {
     text-color:                  @foreground;
     cursor:                      pointer;
 }
+
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
@@ -157,6 +159,7 @@ element-text {
     vertical-align:              0.5;
     horizontal-align:            0.5;
 }
+
 element selected.normal {
     border:                      0px 2px 0px 2px;
     border-radius:               4px;

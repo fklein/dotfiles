@@ -12,25 +12,26 @@ set $drac-red #ff5555
 set $drac-yel #f1fa8c
 set $drac-gry #bfbfbf
 
-# Class                   # Border    # Backgr.   # Text      # Indic.    # Child border
-client.focused            $drac-pur   $drac-pur   $drac-bgd   $drac-pur   $drac-pur
-client.focused_inactive   $drac-cmt   $drac-cmt   $drac-fgd   $drac-cmt   $drac-cmtF
-client.unfocused          $drac-cur   $drac-cur   $drac-fgd   $drac-cur   $drac-cur
-client.urgent             $drac-red   $drac-re    $drac-bgd   $drac-red   $drac-red
-client.placeholder        #000000     $drac-bgd   $drac-fgd   #000000     $drac-cur
-client.background         $drac-bgd
+# Target                 # Border    # Backgr.   # Text      # Indic.    # Child border
+client.focused           $drac-pur   $drac-pur   $drac-bgd   $drac-pur   $drac-pur
+client.focused_inactive  $drac-cmt   $drac-cmt   $drac-fgd   $drac-cmt   $drac-cmt
+client.unfocused         $drac-cur   $drac-cur   $drac-fgd   $drac-cur   $drac-cur
+client.urgent            $drac-red   $drac-red   $drac-bgd   $drac-red   $drac-red
+client.placeholder       #000000     $drac-gry   $drac-fgd   #000000     $drac-gry
+
+client.background        $drac-bgd
 
 bar {
      colors {
-        background           $drac-bgd
-        statusline           $drac-fgd
-        separator            $drac-cur
+        background          $drac-bgd
+        statusline          $drac-fgd
+        separator           $drac-cur
 
-        # Class              # Border    # Backgr.   # Text
-        focused_workspace    $drac-cya   $drac-cya   $drac-bgd
-        active_workspace     $drac-cmt   $drac-cmt   $drac-fgd
-        inactive_workspace   $drac-bgd   $drac-cur   $drac-gry
-        urgent_workspace     $drac-red   $drac-red   $drac-fgd
-        binding_mode         $drac-pnk   $drac-pnk   $drac-bgd
+        # Target            # Border    # Backgr.   # Text
+        focused_workspace   $drac-cya   $drac-cya   $drac-bgd
+        active_workspace    $drac-bgd   $drac-cmt   $drac-fgd
+        inactive_workspace  $drac-bgd   $drac-cur   $drac-gry
+        urgent_workspace    $drac-bgd   $drac-red   $drac-bgd
+        binding_mode        $drac-bgd   $drac-pnk   $drac-bgd
     }
 }

@@ -10,7 +10,7 @@
     background-alt: @nord1-polarnight;
     foreground:     @nord6-snowstorm;
     foreground-alt: @nord4-snowstorm;
-    selected:       @nord8-frost; // @nord9-frost
+    selected:       @nord9-frost;
     border:         @nord8-frost;
     active:         @nord15-aurora;
     urgent:         @nord13-aurora;

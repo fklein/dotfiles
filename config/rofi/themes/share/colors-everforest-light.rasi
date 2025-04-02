@@ -3,6 +3,7 @@
  */
 
 * {
+/*
     // Hard color palette
     bg-dim:      #f2efdf;
     bg0:         #fffbef;
@@ -16,8 +17,8 @@
     bg-green:    #f3f5d9;
     bg-blue:     #ecf5ed;
     bg-yellow:   #fef2d5;
+*/
 
-/*
     // Medium color palette (default)
     bg-dim:      #efebd4;
     bg0:         #fdf6e3;
@@ -32,6 +33,7 @@
     bg-blue:     #e9f0e9;
     bg-yellow:   #faedcd;
 
+/*
     // Soft color palette
     bg-dim:      #e5dfc5;
     bg0:         #f3ead3;
@@ -65,7 +67,7 @@
 
     // Set the variables used by the themes
     background:     @bg0;
-    background-alt: @bg2;
+    background-alt: @bg3;
     foreground:     @fg;
     foreground-alt: @statusline2;
     selected:       @green;

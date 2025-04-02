@@ -3,6 +3,7 @@
  */
 
 * {
+/*
     // Hard color palette
     bg-dim:      #1e2326;
     bg0:         #272e33;
@@ -16,8 +17,8 @@
     bg-green:    #3c4841;
     bg-blue:     #384b55;
     bg-yellow:   #45443c;
+*/
 
-/*
     // Medium color palette (default)
     bg-dim:      #232a2e;
     bg0:         #2d353b;
@@ -32,6 +33,7 @@
     bg-blue:     #3a515d;
     bg-yellow:   #4d4c43;
 
+/*
     // Soft color palette
     bg-dim:      #293136;
     bg0:         #333c43;
