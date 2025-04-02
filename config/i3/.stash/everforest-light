@@ -61,7 +61,7 @@ set $statusline3 #e66868
 # Class                  # Border    # Backgr.  # Text     # Indic.    # Child border
 client.focused           $green      $green     $bg0       $green      $green
 client.focused_inactive  $bg-green   $bg-green  $fg        $bg-green   $bg-green
-client.unfocused         $bg1        $bg1       $fg        $bg1        $bg1
+client.unfocused         $bg2        $bg2       $fg        $bg2        $bg2
 client.urgent            $orange     $orange    $bg0       $orange     $orange
 client.placeholder       #000000     $bg-dim    $fg        #000000     $bg-dim
 
@@ -72,12 +72,12 @@ bar {
     colors {
         background         $bg0
         statusline         $fg
-        separator          $bg3
+        separator          $bg4
 
         # Class              # Border    # Backgr.   # Text
         focused_workspace    $blue       $blue       $bg0
         active_workspace     $bg0        $bg-blue    $fg
-        inactive_workspace   $bg0        $bg2        $fg
+        inactive_workspace   $bg0        $bg3        $fg
         urgent_workspace     $orange     $orange     $bg0
         binding_mode         $purple     $purple     $bg0
     }

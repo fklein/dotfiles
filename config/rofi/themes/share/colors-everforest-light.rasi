@@ -65,7 +65,7 @@
 
     // Set the variables used by the themes
     background:     @bg0;
-    background-alt: @bg2;
+    background-alt: @bg3;
     foreground:     @fg;
     foreground-alt: @statusline2;
     selected:       @green;
