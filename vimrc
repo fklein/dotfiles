@@ -66,11 +66,11 @@ set undodir=~/.vim/undo//
 silent! colorscheme default
 
 "
-" Apply the solarized colorscheme
+" Apply a colorscheme
 "
 set background=dark
 " let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
 
 "
 " Enable mouse mode (scrolling, selection, etc)
