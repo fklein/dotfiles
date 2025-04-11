@@ -3,8 +3,3 @@
     url = https://github.com/anishathalye/dotbot.git
     ignore = dirty
 
-[submodule "dircolors-solarized"]
-    path = dircolors-solarized
-    url = https://github.com/seebi/dircolors-solarized.git
-    ignore = dirty
-

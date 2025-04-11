@@ -15,7 +15,6 @@
     ~/.bashrc.d/:
         path: bashrc.d/*.bash
         glob: true
-    ~/.dircolors: dircolors-solarized/dircolors.ansi-dark
     ~/.inputrc:
     ~/.vimrc:
     ~/.gitconfig:
