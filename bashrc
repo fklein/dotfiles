@@ -42,9 +42,19 @@ else
     PROMPT_COMMAND='printf "\e]0;%s\a" "${PWD/#$HOME/\~}"'
 fi
 
-# Make vim the standard editor
-alias vi='vim'
-export EDITOR='vim'
+# Make neovim the standard editor (fallback to vim or vi)
+export EDITOR="vi"
+export VISUAL="vi"
+if command -v nvim &>/dev/null; then
+    alias vi='nvim'
+    alias vim='nvim'
+    export EDITOR="nvim"
+    export VISUAL="nvim"
+elif command -v vim &>/dev/null; then
+    alias vi='vim'
+    export EDITOR="vim"
+    export VISUAL="vim"
+fi
 
 # Turn on colorful output in coreutils
 alias ls='ls --color=auto'
