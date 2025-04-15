@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+notification_timeout=1000
+
+# Get the current brightness in percent
+function get_brightness {
+    brightnessctl --machine-readable info | cut -d ',' -f 4 | tr -d '%' | head -n 1
+}
+
+# Displays a btightness notification using notify-send
+function show_notification {
+    local brightness_icon=""
+    local brightness=$(get_brightness)
+    notify-send -t $notification_timeout -h "string:x-dunst-stack-tag:brightness_notif" -h "int:value:${brightness}" "Brightness" "${brightness_icon} ${brightness}%"
+}
+
+# Process the input
+action=$1
+step=${2:-"10"}
+case "$action" in
+    up)
+        brightness=$(get_brightness)
+        # Correct for the workaround of not going below 1%
+        (( $brightness == 1 )) && ((step--))
+        brightnessctl set "${step}%+"
+        show_notification
+        ;;
+
+    down)
+        brightness=$(get_brightness)
+        # Don't go to 0% brightness as it will turn the sceen off
+        if (( $brightness - $step <= 0 )); then
+            brightnessctl set "1%"
+        else
+            brightnessctl set "${step}%-"
+        fi
+        show_notification
+        ;;
+esac
