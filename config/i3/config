@@ -123,13 +123,7 @@ bindcode $mod+49 exec --no-startup-id "rofi -show window \
     -theme-str 'listview { columns: 1; fixed-height: false; }'"
 
 # Show a fancy power menu with rofi
-bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/powermenu.sh
-
-# An alternative way of displaying a power menu with rofi
-# bindsym $mod+BackSpace exec --no-startup-id "rofi -show pm \
-#     -modi pm:~/.config/rofi/scripts/power-menu \
-#     -theme ~/.config/rofi/themes/launcher-squared.rasi \
-#     -theme-str 'window {width: 8em;} listview {lines: 6;}'"
+bindsym $mod+BackSpace exec --no-startup-id ~/.config/i3/scripts/powermenu
 
 ##############
 # Workspaces #
@@ -207,9 +201,9 @@ bindsym Print exec --no-startup-id scrot ~/%Y-%m-%d_%T-screenshot.png && notify-
 
 # Use pactl to adjust volume in PulseAudio
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/volumectl.sh up && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/volumectl.sh down && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volumectl.sh mute && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/volume-control up && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/volume-control down && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume-control mute && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Playback control
@@ -225,7 +219,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 # Resize mode #
 ###############
 
-set $modeResize resize
+set $modeResize Resize
 
 mode "$modeResize" {
     # Shrink or grow the focused windows height or width
@@ -252,7 +246,7 @@ bindsym $mod+r mode "$modeResize"
 # Gaps mode #
 #############
 
-set $modeGaps Gaps: (o)uter, (i)nner
+set $modeGaps Gaps: (O)uter, (I)nner
 set $modeGapsOuter Outer gaps: Up or Down to change, 0 to reset (+Shift for global)
 set $modeGapsInner Inner gaps: Up or Down to change, 0 to reset (+Shift for global)
 
@@ -318,7 +312,7 @@ mode "$modeGapsInner" {
 # Launch mode #
 ###############
 
-set $modeLaunch Launch: [W] Firefox, [F] Filemanager, [T] Terminal
+set $modeLaunch Launch: (W) Firefox, (F) Filemanager, (T) Terminal
 
 mode "$modeLaunch" {
     bindsym w exec firefox, mode "default"
@@ -337,7 +331,7 @@ bindsym $mod+Shift+Return mode "$modeLaunch"
 # System control mode #
 #######################
 
-set $modeSysControl System: [L]ock, [E]xit, [S]uspend, [H]ibernate, [R]eboot, [CTRL+S]hutdown
+set $modeSysControl System: (L)ock, (E)xit, (S)uspend, (H)ibernate, (R)eboot, (CTRL+S)hutdown
 
 mode "$modeSysControl" {
     bindsym l exec --no-startup-id loginctl lock-session, mode "default"
