@@ -28,38 +28,38 @@ function get_volume_icon {
 }
 
 # Displays a volume notification using notify-send
-function show_volume_notif {
-    volume_icon=$(get_volume_icon)
-    volume=$(get_volume)
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$volume "Volume" "$volume_icon $volume%"
+function show_notification {
+    local volume_icon=$(get_volume_icon)
+    local volume=$(get_volume)
+    notify-send -t $notification_timeout -h "string:x-dunst-stack-tag:volume_notif" -h "int:value:${volume}" "Volume" "${volume_icon} ${volume}%"
 }
 
 # Process the input
 action=$1
-volume_step=${2:-"2"}
+step=${2:-"2"}
 case "$action" in
     up)
-    	pactl set-sink-mute @DEFAULT_SINK@ 0
-	volume=$(get_volume)
-    	if (( $volume + $volume_step > $max_volume )); then
+        pactl set-sink-mute @DEFAULT_SINK@ 0
+    volume=$(get_volume)
+        if (( $volume + $step > $max_volume )); then
             pactl set-sink-volume @DEFAULT_SINK@ "${max_volume}%"
         else
-            pactl set-sink-volume @DEFAULT_SINK@ "+${volume_step}%"
+            pactl set-sink-volume @DEFAULT_SINK@ "+${step}%"
         fi
-        show_volume_notif
+        show_notification
         ;;
 
     down)
-        pactl set-sink-volume @DEFAULT_SINK@ "-${volume_step}%"
+        pactl set-sink-volume @DEFAULT_SINK@ "-${step}%"
         volume=$(get_volume)
         if (( $volume <= 0 )); then
             pactl set-sink-mute @DEFAULT_SINK@ 1
         fi
-        show_volume_notif
+        show_notification
         ;;
 
     mute)
         pactl set-sink-mute @DEFAULT_SINK@ toggle
-        show_volume_notif
+        show_notification
         ;;
 esac
