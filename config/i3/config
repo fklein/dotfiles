@@ -312,13 +312,14 @@ mode "$modeGapsInner" {
 # Launch mode #
 ###############
 
-set $modeLaunch Launch: (W) Firefox, (F) Filemanager, (T) Terminal, (M) Deezer
+set $modeLaunch Launch: (W)ebbrowser, (F)ilemanager, (T)erminal, (M)usicplayer, (C)alculator
 
 mode "$modeLaunch" {
     bindsym w exec firefox, mode "default"
     bindsym f exec thunar, mode "default"
     bindsym t exec i3-sensible-terminal, mode "default"
     bindsym m exec deezer, mode "default"
+    bindsym c exec galculator, mode "default"
 
     # Back to normal: Enter or Escape or $mod+Shift+Enter
     bindsym Return mode "default"
