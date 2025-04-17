@@ -312,12 +312,13 @@ mode "$modeGapsInner" {
 # Launch mode #
 ###############
 
-set $modeLaunch Launch: (W) Firefox, (F) Filemanager, (T) Terminal
+set $modeLaunch Launch: (W) Firefox, (F) Filemanager, (T) Terminal, (M) Deezer
 
 mode "$modeLaunch" {
     bindsym w exec firefox, mode "default"
     bindsym f exec thunar, mode "default"
     bindsym t exec i3-sensible-terminal, mode "default"
+    bindsym m exec deezer, mode "default"
 
     # Back to normal: Enter or Escape or $mod+Shift+Enter
     bindsym Return mode "default"
@@ -360,23 +361,18 @@ bindsym $mod+Shift+x exec --no-startup-id loginctl lock-session
 bindsym $mod+p exec --no-startup-id pavucontrol
 
 # Set floating (nontiling) for special windows
+for_window [window_role="About"] floating enable
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="pavucontrol" instance="pavucontrol"] floating enable
 for_window [class="qt5ct" instance="qt5ct"] floating enable
-for_window [class="Lxappearance"] floating enable
-for_window [class=feh|vlc|Xarchiver] floating enable
-for_window [window_role="About"] floating enable
+for_window [class="feh|vlc|Xarchiver|Lxappearance"] floating enable
 
 # Bind windows to a workspace and focus to them on startup
-# assign [class="Xfce4-terminal"] workspace number $ws1
-# assign [class="(?i)firefox"] workspace number $ws2
-# assign [class="Thunar"] workspace number $ws3
+assign [class="Deezer" instance="deezer"] workspace number $ws3
 
 # Automatic set focus new window if it opens on another workspace than the current
-# for_window [class=Xfce4-terminal] focus
-# for_window [class=(?i)firefox] focus
-# for_window [class=Thunar] focus
+for_window [class="Deezer" instance="deezer"] focus
 
 ###################################
 # Autostart services/applications #
