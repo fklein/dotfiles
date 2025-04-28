@@ -366,6 +366,7 @@ for_window [window_role="About"] floating enable
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="pavucontrol" instance="pavucontrol"] floating enable
+for_window [class="Blueman-manager" instance="blueman-manager"] floating enable
 for_window [class="qt5ct" instance="qt5ct"] floating enable
 for_window [class="feh|vlc|Xarchiver|Lxappearance"] floating enable
 
@@ -412,6 +413,9 @@ exec --no-startup-id pasystray
 
 # Start dunst for notifications
 exec --no-startup-id /usr/bin/dunst
+
+# Use blueman to provide a bluetooth tray icon
+exec --no-startup-id blueman-applet
 
 # Run the picom compositor for transparency
 # exec --no-startup-id picom -f
