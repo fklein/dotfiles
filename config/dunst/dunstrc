@@ -3,6 +3,7 @@
     monitor = 2
 
     follow = none
+    enable_posix_regex = true
 
     ### Geometry ###
     width = 300
@@ -99,3 +100,13 @@
 
 [urgency_critical]
     frame_color = "#f5a97f"
+
+[suppress_alsa_sink]
+    summary = "^New sink"
+    body = "^alsa_output"
+    format = ""
+
+[suppress_alsa_source]
+    summary = "^New source"
+    body = "^alsa_input"
+    format = ""
