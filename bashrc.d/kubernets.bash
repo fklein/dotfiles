@@ -1,5 +1,18 @@
-if command -v "kubectl" >/dev/null 2>&1; then
-    alias k='kubectl'
-    alias kdesc='kubectl describe'
-    alias kget='kubectl get'
+if command -v kubectl >/dev/null 2>&1; then
+    alias kc='kubectl'
+    alias kccreate='kubectl create'
+    alias kcdel='kubectl delete'
+    alias kcedit='kubectl edit'
+    alias kcrep='kubectl replace'
+    alias kcrun='kubectl run'
+    alias kcexe='kubectl exec'
+    alias kcget='kubectl get'
+    alias kcdesc='kubectl describe'
+    alias kcexp='kubectl expose'
+    alias kcscale='kubectl scale'
+    alias kctop='kubectl top'
+    alias kcdiff='kubectl diff'
+    alias kcattach='kubectl attach'
+    alias kcev='kubectl events'
+    alias kclog='kubectl logs'
 fi
