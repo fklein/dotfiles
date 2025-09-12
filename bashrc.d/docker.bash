@@ -29,6 +29,7 @@ if command -v docker >/dev/null 2>&1; then
     alias dkcd="${DOCKERCMD} container diff"
     alias dkcw="${DOCKERCMD} container wait"
     alias dkct="${DOCKERCMD} container top"
+    alias dkcp="${DOCKERCMD} container port"
     alias dkcs="${DOCKERCMD} container start"
     alias dkck="${DOCKERCMD} container kill"
     # subgroup for container status, to avoid conflicts
@@ -44,7 +45,7 @@ if command -v docker >/dev/null 2>&1; then
     alias dkcip="${DOCKERCMD} container port"
     alias dkcis="${DOCKERCMD} container stats"
 
-    alias dkcsh="_docker_container_exec "sh""
+    alias dkcsh="_docker_container_exec \"sh\""
     _docker_container_exec() {
         ${DOCKERCMD} container exec --interactive --tty "${2}" ${1}
     }
@@ -80,17 +81,17 @@ if command -v docker >/dev/null 2>&1; then
     alias dkvz="${DOCKERCMD} volume prune"
 
     # system / Manage Docker
-    alias dky="${DOCKERCMD} system"
-    alias dkye="${DOCKERCMD} system events"
-    alias dkyi="${DOCKERCMD} system info"
-    alias dkyz="${DOCKERCMD} system prune"
+    alias dks="${DOCKERCMD} system"
+    alias dkse="${DOCKERCMD} system events"
+    alias dksi="${DOCKERCMD} system info"
+    alias dksz="${DOCKERCMD} system prune"
 
     # checkpoint / Manage checkpoints
     alias dkchk="${DOCKERCMD} checkpoint"
 
     # context / Manage contexts
     alias dkctx="${DOCKERCMD} context"
-    
+
     # manifest / Manage Docker image manifests and manifest lists
     alias dkm="${DOCKERCMD} manifest"
 
@@ -103,25 +104,43 @@ if command -v docker >/dev/null 2>&1; then
     # compose / Define and run multi-container applications with Docker
     if docker compose >/dev/null 2>&1; then
         alias dc="${DOCKERCMD} compose"
+
         alias dcu="${DOCKERCMD} compose up"
         alias dcd="${DOCKERCMD} compose down"
+        alias dcl="${DOCKERCMD} compose ls"
         alias dcb="${DOCKERCMD} compose build"
         alias dcc="${DOCKERCMD} compose create"
-        alias dcl="${DOCKERCMD} compose ls"
-        alias dce="${DOCKERCMD} compose exec"
-        alias dci="${DOCKERCMD} compose images"
         alias dcx="${DOCKERCMD} compose rm"
-        alias dct="${DOCKERCMD} compose top"
-        alias dcv="${DOCKERCMD} compose volumes"
+        alias dcr="${DOCKERCMD} compose run"
+        alias dce="${DOCKERCMD} compose exec"
         alias dca="${DOCKERCMD} compose attach"
-        
+        alias dci="${DOCKERCMD} compose images"
+        alias dcv="${DOCKERCMD} compose volumes"
+        alias dct="${DOCKERCMD} compose top"
+        alias dcp="${DOCKERCMD} compose ps"
+        alias dcw="${DOCKERCMD} compose watch"
+        alias dcs="${DOCKERCMD} compose scale"
+        # subgroup for service status, to avoid conflicts
+        alias dcss="${DOCKERCMD} compose start"
+        alias dcsr="${DOCKERCMD} compose restart"
+        alias dcsx="${DOCKERCMD} compose stop"
+        alias dcsk="${DOCKERCMD} compose kill"
+        alias dcsp="${DOCKERCMD} compose pause"
+        alias dcsu="${DOCKERCMD} compose unpause"
+        alias dcsw="${DOCKERCMD} compose wait"
+        # subgroup for service info, to avoid conflicts
+        alias dcil="${DOCKERCMD} compose logs"
+        alias dcip="${DOCKERCMD} compose port"
+        alias dcis="${DOCKERCMD} compose stats"
+        alias dcie="${DOCKERCMD} compose events"
+        alias dciv="${DOCKERCMD} compose version"
     fi
 
     # swarm / Define and run multi-container applications with Docker
     if docker swarm >/dev/null 2>&1; then
         alias ds="${DOCKERCMD} swarm"
 
-        # service / Manage services
+        # service / Manage Swarm services
         alias dss="${DOCKERCMD} service"
         alias dssl="${DOCKERCMD} service ls"
         alias dssc="${DOCKERCMD} service create"
@@ -133,7 +152,7 @@ if command -v docker >/dev/null 2>&1; then
         alias dssp="${DOCKERCMD} service ps"
         alias dssil="${DOCKERCMD} service logs"
 
-        # node / Manage nodes
+        # node / Manage Swarm nodes
         alias dsn="${DOCKERCMD} node"
         alias dsnl="${DOCKERCMD} node ls"
         alias dsni="${DOCKERCMD} node inspect"
@@ -143,22 +162,22 @@ if command -v docker >/dev/null 2>&1; then
         alias dsnw="${DOCKERCMD} node demote"
         alias dsnm="${DOCKERCMD} node promote"
 
-        # secret / Manage secrets
+        # secret / Manage Swarm secrets
         alias dsx="${DOCKERCMD} secret"
         alias dsxl="${DOCKERCMD} secret ls"
         alias dsxc="${DOCKERCMD} secret create"
         alias dsxi="${DOCKERCMD} secret inspect"
         alias dsxx="${DOCKERCMD} secret rm"
+        alias dsxci='read -p "Name: " sname && read -sp "Value: " sval && echo && ${DOCKERCMD} secret create "${sname}" - <<< ${sval} ; unset sname sval'
 
-
-        # stack / Manage stacks
-        alias dss="${DOCKERCMD} stack"
-        alias dssl="${DOCKERCMD} stack ls"
-        alias dssx="${DOCKERCMD} stack rm"
-        alias dssp="${DOCKERCMD} stack ps"
-        alias dssd="${DOCKERCMD} stack deploy"
-        alias dsss="${DOCKERCMD} stack services"
-        alias dssc="${DOCKERCMD} stack config"
+        # stack / Manage SWarm stacks
+        alias dst="${DOCKERCMD} stack"
+        alias dstl="${DOCKERCMD} stack ls"
+        alias dstx="${DOCKERCMD} stack rm"
+        alias dstp="${DOCKERCMD} stack ps"
+        alias dstd="${DOCKERCMD} stack deploy"
+        alias dsts="${DOCKERCMD} stack services"
+        alias dstc="${DOCKERCMD} stack config"
     fi
 fi
 
