@@ -1,4 +1,4 @@
-# Dotfiles
+# Dotfiles [![Build Status](https://github.com/fklein/dotfiles/actions/workflows/ci.yml/badge.svg)](https://github.com/fklein/dotfiles/actions/workflows/ci.yml)
 
 These are my everly evolving personal dotfiles.
 
