@@ -1,0 +1,12 @@
+<application>
+  <component name="JavaIdeCodeInsightSettings">
+    <included-static-names>
+      <name>org.assertj.core.api.Assertions</name>
+      <name>org.mockito.ArgumentMatchers</name>
+      <name>org.mockito.BDDMockito</name>
+      <name>org.mockito.Mockito</name>
+      <name>org.springframework.test.web.servlet.request.MockMvcRequestBuilders</name>
+      <name>org.springframework.test.web.servlet.result.MockMvcResultMatchers</name>
+    </included-static-names>
+  </component>
+</application>
