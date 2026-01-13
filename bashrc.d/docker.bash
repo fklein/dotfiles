@@ -102,7 +102,7 @@ if command -v docker >/dev/null 2>&1; then
     alias dkt="${DOCKERCMD} trust"
 
     # compose / Define and run multi-container applications with Docker
-    if docker compose >/dev/null 2>&1; then
+    if command docker compose >/dev/null 2>&1; then
         alias dc="${DOCKERCMD} compose"
 
         alias dcu="${DOCKERCMD} compose up"
@@ -137,7 +137,7 @@ if command -v docker >/dev/null 2>&1; then
     fi
 
     # swarm / Define and run multi-container applications with Docker
-    if docker swarm >/dev/null 2>&1; then
+    if command docker swarm >/dev/null 2>&1; then
         alias ds="${DOCKERCMD} swarm"
 
         # service / Manage Swarm services
