@@ -21,14 +21,18 @@
     ~/.gitignore:
     ~/.gitmessage:
     ~/.pythonrc:
+
     ~/.config/:
         path: config/**
         glob: true
         exclude:
+            # Exclude the files in a few directories and instead link the full
+            # directories instead (see below).
             - config/rofi/themes/share/**
             - config/i3/share/**
-    ~/.config/rofi/themes/share: config/rofi/themes/share
-    ~/.config/i3/share: config/i3/share
+    ~/.config/rofi/themes/share/: config/rofi/themes/share/
+    ~/.config/i3/share/: config/i3/share/
+
     ~/.local/share:
         path: local/share/**
         glob: true
