@@ -73,6 +73,7 @@
     </option>
     <option name="IMPORT_LAYOUT_TABLE">
       <value>
+        <emptyLine />
         <package name="java" withSubpackages="true" static="false" />
         <emptyLine />
         <package name="jakarta" withSubpackages="true" static="false" />
@@ -82,9 +83,9 @@
         <emptyLine />
         <package name="com.github.fklein" withSubpackages="true" static="false" />
         <emptyLine />
-        <package name="com.github.fklein" withSubpackages="true" static="true" />
-        <emptyLine />
         <package name="" withSubpackages="true" static="true" />
+        <emptyLine />
+        <package name="com.github.fklein" withSubpackages="true" static="true" />
       </value>
     </option>
   </JavaCodeStyleSettings>
