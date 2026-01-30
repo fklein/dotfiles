@@ -19,6 +19,7 @@
     update-submodules = submodule update --init --recursive
     upgrade-submodules = submodule update --init --remote
     zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o \"${1}\"; }; zip"
+    ghlogin = ! "ssh-add ~/.ssh/github"
 
 [init]
     defaultBranch = master
