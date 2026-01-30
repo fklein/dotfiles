@@ -21,6 +21,7 @@
     ~/.gitignore:
     ~/.gitmessage:
     ~/.pythonrc:
+    ~/.ssh/config: ssh/config
 
     ~/.config/:
         path: config/**
