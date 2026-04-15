@@ -16,4 +16,9 @@ ssh_agent_isup() {
     ps -p "${SSH_AGENT_PID}" >/dev/null 2>&1 || return 1
 }
 
+ssh_agent_restart() {
+    ssh_agent_isup && kill "${SSH_AGENT_PID}"
+    ssh_agent_init
+}
+
 ssh_agent_isup || ssh_agent_init
