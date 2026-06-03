@@ -20,6 +20,8 @@
     upgrade-submodules = submodule update --init --remote
     zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o \"${1}\"; }; zip"
     ghlogin = ! "ssh-add ~/.ssh/github"
+    prune-branches = ! "git fetch --prune && git branch -vv | awk '/: gone]/{print $1}' | xargs -r git branch -D"
+
 
 [init]
     defaultBranch = master
