@@ -21,4 +21,4 @@ ssh_agent_restart() {
     ssh_agent_init
 }
 
-ssh_agent_isup || ssh_agent_init
+ssh_agent_isup || ssh_agent_init >/dev/null
